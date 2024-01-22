@@ -124,6 +124,7 @@ current = true
 zoom = Vector2( 0.3, 0.3 )
 smoothing_enabled = true
 smoothing_speed = 4.0
+offset_v = -0.85
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 11 )
