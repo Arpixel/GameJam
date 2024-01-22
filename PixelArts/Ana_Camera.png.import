@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kup.png-20b4419b274db71a3896174fd2606e42.stex"
+path="res://.import/Ana_Camera.png-bacaf75acf2ca6474149826a4878227e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PixelArts/Kup.png"
-dest_files=[ "res://.import/Kup.png-20b4419b274db71a3896174fd2606e42.stex" ]
+source_file="res://PixelArts/Ana_Camera.png"
+dest_files=[ "res://.import/Ana_Camera.png-bacaf75acf2ca6474149826a4878227e.stex" ]
 
 [params]
 

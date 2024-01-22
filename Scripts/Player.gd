@@ -9,7 +9,7 @@ var dir = 0
 
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("D"):
 		dir = 1
 	else:
@@ -22,7 +22,7 @@ func _process(delta):
 	
 	velocity.x = speed * dir
 	velocity.y += gravity
-	move_and_slide(velocity, Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.UP)
 	UpdateAnimation()
 
 
