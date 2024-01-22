@@ -6,17 +6,14 @@
 [ext_resource path="res://Sprites/Character/Jump/Jump Sprite Sheet.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=21]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 48, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 96, 0, 48, 48 )
 
@@ -111,7 +108,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 11.5, 15.5 )
+extents = Vector2( 7, 14.5 )
 
 [node name="Player" type="Node2D"]
 
