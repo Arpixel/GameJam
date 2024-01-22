@@ -3,8 +3,8 @@ extends KinematicBody2D
 
 var velocity = Vector2()
 var speed = 150
-var gravity = 15
-var jump_strength = -270
+var gravity = 12
+var jump_strength = -250
 var dir = 0
 
 
@@ -22,14 +22,17 @@ func _process(delta):
 	velocity.x = speed * dir
 	velocity.y += gravity
 	move_and_slide(velocity, Vector2.UP)
+	UpdateAnimation()
 
 
 func UpdateAnimation():
 	if dir == 1:
-		pass
+		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.play("Walk")
 	if dir == 0:
 		$AnimatedSprite.play("default")
 	if dir == -1:
-		pass
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play("Walk")
 
 
