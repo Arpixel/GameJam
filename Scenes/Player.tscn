@@ -142,7 +142,7 @@ __meta__ = {
 [node name="Light2D" type="Light2D" parent="Player"]
 texture = ExtResource( 5 )
 texture_scale = 0.5
-energy = 0.3
+energy = 0.2
 shadow_enabled = true
 __meta__ = {
 "_edit_group_": true,
