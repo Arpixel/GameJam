@@ -45,34 +45,42 @@ atlas = ExtResource( 1 )
 region = Rect2( 432, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=15]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=16]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 48, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=17]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 96, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=18]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 144, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=19]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 192, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=20]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 240, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=21]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 288, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=22]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 336, 0, 48, 48 )
 
@@ -93,10 +101,10 @@ animations = [ {
 extents = Vector2( 10, 14 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 126.5, 13.5 )
+extents = Vector2( 92, 32.5 )
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 18.5, 17 )
+extents = Vector2( 18.5, 20.5 )
 
 [node name="Gardiyan 00" type="KinematicBody2D"]
 collision_layer = 2
@@ -126,14 +134,15 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Alan"]
 visible = false
-position = Vector2( 0.5, -15.5 )
+position = Vector2( 4, -15.5 )
 shape = SubResource( 13 )
 
 [node name="Attack" type="Area2D" parent="."]
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack"]
-position = Vector2( 0.5, 0 )
+visible = false
+position = Vector2( 0.5, 3.5 )
 shape = SubResource( 14 )
 
 [node name="AttackTimer" type="Timer" parent="."]

@@ -306,19 +306,25 @@ __meta__ = {
 position = Vector2( 128, -32 )
 
 [node name="Gardiyan 00" parent="." instance=ExtResource( 14 )]
-position = Vector2( 298, -19 )
+position = Vector2( 118, -75 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( -81, -20 )
+position = Vector2( 71, -17 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Key" parent="." instance=ExtResource( 10 )]
-position = Vector2( 483, -21 )
+position = Vector2( 352, -42 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Keycard" parent="." instance=ExtResource( 11 )]
-position = Vector2( 311, -16 )
+position = Vector2( 1474, -18 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.698039, 0.698039, 0.698039, 1 )
