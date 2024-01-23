@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Masa ve Sandalye.png-25fb571ae919be272592bfe59656d6cd.stex"
+path="res://.import/Crouch Idle Sprite Sheet.png-b1ec8e68ce326d9a452de176d3df3886.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PixelArts/Masa ve Sandalye.png"
-dest_files=[ "res://.import/Masa ve Sandalye.png-25fb571ae919be272592bfe59656d6cd.stex" ]
+source_file="res://Sprites/Character/Crouch Idle/Crouch Idle Sprite Sheet.png"
+dest_files=[ "res://.import/Crouch Idle Sprite Sheet.png-b1ec8e68ce326d9a452de176d3df3886.stex" ]
 
 [params]
 
