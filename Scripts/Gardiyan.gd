@@ -4,7 +4,7 @@ var velocity = Vector2()
 var dir = 0
 var speed = 70
 var Gravity = 15
-
+var Attack = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -43,3 +43,28 @@ func _UpdateAnim():
 		$AnimatedSprite.play("Idle")
 	if dir == -1:
 		pass
+
+
+		
+
+func _on_Attack_body_entered(body):
+	if body.name == "Player":
+		Attack = true
+		Global.Player_Heath -= 10
+		$AttackTimer.start()
+	
+	
+
+
+
+func _on_AttackTimer_timeout():
+	if Attack == true:
+		Global.Player_Heath -= 10
+		
+		$AttackTimer.start()
+	
+
+
+func _on_Attack_body_exited(body):
+	if body.name == "Player":
+		Attack = false
