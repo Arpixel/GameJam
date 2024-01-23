@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://PixelArts/Camera_Uc.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Ana_Camera.png" type="Texture" id=2]
+[ext_resource path="res://PixelArts/Light_Ucgen.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.5, 6.5 )
@@ -39,6 +40,10 @@ tracks/0/keys = {
 }
 
 [node name="Camera" type="StaticBody2D"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Sprite 01" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -51,7 +56,21 @@ __meta__ = {
 rotation = -0.610865
 texture = ExtResource( 2 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Light2D" type="Light2D" parent="Sprite 00"]
+position = Vector2( -134, 0 )
+rotation = 1.5708
+scale = Vector2( 1, 5 )
+texture = ExtResource( 3 )
+texture_scale = 0.05
+energy = 0.75
+shadow_enabled = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
