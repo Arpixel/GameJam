@@ -22,16 +22,17 @@ func _process(_delta):
 	if Global.Player_Heath <= 0:
 		get_tree().reload_current_scene()
 	
-	
-	if Input.is_action_pressed("D"):
-		dir = 1
-	else:
-		dir = 0
-	if Input.is_action_pressed("A"):
-		dir = -1
-	if Input.is_action_pressed("ui_select") and is_on_floor():
-		velocity.y = jump_strength
-		
+	if Global.Player_Crouch == false:
+		if Input.is_action_pressed("D"):
+			dir = 1
+		else:
+			dir = 0
+		if Input.is_action_pressed("A"):
+			dir = -1
+		if Input.is_action_pressed("ui_select") and is_on_floor():
+			velocity.y = jump_strength
+	elif Global.Player_Crouch == true:
+		pass
 	
 	velocity.x = speed * dir
 	velocity.y += gravity
@@ -55,6 +56,8 @@ func UpdateAnimation():
 				$AnimatedSprite.play("Walk")
 		if Input.is_action_pressed("ui_select"):
 			$AnimatedSprite.play("Jump")
+	elif Global.Player_Crouch == true:
+		$AnimatedSprite.play("Crouch")
 
 func ReloadPosition():
 	global_position.x = Global.Posx

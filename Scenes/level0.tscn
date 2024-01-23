@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://PixelArts/ZeminTaban.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Zemin.png" type="Texture" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://Scenes/Room1Giris.tscn" type="PackedScene" id=15]
 [ext_resource path="res://PixelArts/Tavan2.png" type="Texture" id=16]
 [ext_resource path="res://Scripts/Level 0.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/PasueMenu.gd" type="Script" id=18]
+[ext_resource path="res://Font/EXEPixelPerfect.ttf" type="DynamicFontData" id=19]
 
 [sub_resource type="OccluderPolygon2D" id=12]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -238,6 +240,14 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
+[sub_resource type="DynamicFont" id=21]
+size = 64
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 96
+font_data = ExtResource( 19 )
+
 [node name="level0" type="Node2D"]
 script = ExtResource( 17 )
 
@@ -286,6 +296,7 @@ rotation = 3.14159
 scale = Vector2( 1, -1 )
 
 [node name="Hucre_Kapisi" type="Node2D" parent="CevreTasarim"]
+position = Vector2( -31, 0 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -407,6 +418,69 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="PasueMenu" type="ColorRect" parent="Player/CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 311.0
+margin_top = 72.0
+margin_right = -327.0
+margin_bottom = -48.0
+color = Color( 0.0392157, 0.0392157, 0.0392157, 0.588235 )
+script = ExtResource( 18 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player/CanvasLayer/PasueMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 74.0
+margin_top = 85.0
+margin_right = -68.0
+custom_constants/separation = 70
+
+[node name="MainMenu" type="Button" parent="Player/CanvasLayer/PasueMenu/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 500, 70 )
+custom_fonts/font = SubResource( 21 )
+text = "Main Menu"
+flat = true
+
+[node name="Save_Game" type="Button" parent="Player/CanvasLayer/PasueMenu/VBoxContainer"]
+margin_top = 140.0
+margin_right = 500.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 500, 70 )
+custom_fonts/font = SubResource( 21 )
+text = "Save Game"
+flat = true
+
+[node name="Load_Game" type="Button" parent="Player/CanvasLayer/PasueMenu/VBoxContainer"]
+margin_top = 280.0
+margin_right = 500.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 500, 70 )
+custom_fonts/font = SubResource( 21 )
+text = "Load Game"
+flat = true
+
+[node name="Quit" type="Button" parent="Player/CanvasLayer/PasueMenu/VBoxContainer"]
+margin_top = 420.0
+margin_right = 500.0
+margin_bottom = 490.0
+rect_min_size = Vector2( 500, 70 )
+custom_fonts/font = SubResource( 21 )
+text = "Quit"
+flat = true
+
+[node name="Label" type="Label" parent="Player/CanvasLayer/PasueMenu"]
+margin_right = 641.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 22 )
+text = "Pause"
+align = 1
+
 [node name="Keycard" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1474, -18 )
 
@@ -420,3 +494,6 @@ __meta__ = {
 [connection signal="body_entered" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Key" to="Key" method="_on_Key_body_entered"]
+[connection signal="pressed" from="Player/CanvasLayer/PasueMenu/VBoxContainer/Save_Game" to="Player/CanvasLayer/PasueMenu" method="_on_Save_Game_pressed"]
+[connection signal="pressed" from="Player/CanvasLayer/PasueMenu/VBoxContainer/Load_Game" to="Player/CanvasLayer/PasueMenu" method="_on_Load_Game_pressed"]
+[connection signal="pressed" from="Player/CanvasLayer/PasueMenu/VBoxContainer/Quit" to="Player/CanvasLayer/PasueMenu" method="_on_Quit_pressed"]
