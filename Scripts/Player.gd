@@ -9,6 +9,8 @@ var dir = 0
 
 
 func _ready():
+	ReloadPosition()
+	global_position.y = -10
 	Global.Player = self
 	Global.Player_Heath = 100
 	Global.Turuncu_key = false
@@ -50,4 +52,6 @@ func UpdateAnimation():
 	if Input.is_action_pressed("ui_select"):
 		$AnimatedSprite.play("Jump")
 
-
+func ReloadPosition():
+	global_position.x = Global.Posx
+	global_position.y = Global.Posy
