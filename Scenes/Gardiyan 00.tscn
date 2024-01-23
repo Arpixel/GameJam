@@ -89,9 +89,8 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=12]
-radius = 9.0
-height = 14.0
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 10, 14 )
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 126.5, 13.5 )
@@ -114,8 +113,8 @@ animation = "Idle"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 2 )
-shape = SubResource( 12 )
+position = Vector2( 0, 2.274 )
+shape = SubResource( 23 )
 one_way_collision_margin = 0.0
 
 [node name="Alan" type="Area2D" parent="."]
