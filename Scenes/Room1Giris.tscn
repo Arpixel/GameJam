@@ -8,32 +8,33 @@
 extents = Vector2( 19, 32 )
 
 [node name="Room1Giris" type="Node2D"]
-
-[node name="Room1Giris" type="Area2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Room1Giris"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1Giris"]
-visible = false
-shape = SubResource( 1 )
-
-[node name="Button" type="Button" parent="Room1Giris"]
-visible = false
-margin_left = -12.0
-margin_top = -18.0
-margin_bottom = 2.0
-rect_scale = Vector2( 2, 2 )
-flat = true
-
-[node name="Sprite2" type="Sprite" parent="Room1Giris"]
+[node name="Sprite2" type="Sprite" parent="Area2D"]
 position = Vector2( 0.25, 0.250002 )
 scale = Vector2( 1.98438, 1.98438 )
 texture = ExtResource( 3 )
 
-[connection signal="body_entered" from="Room1Giris" to="Room1Giris" method="_on_Room1Giris_body_entered"]
-[connection signal="pressed" from="Room1Giris/Button" to="Room1Giris" method="_on_Button_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Button" type="Button" parent="Area2D"]
+visible = false
+margin_left = -18.0
+margin_top = -22.0
+margin_right = 18.0
+margin_bottom = 32.0
+flat = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="Area2D/Button" to="." method="_on_Button_pressed"]

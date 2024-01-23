@@ -9,7 +9,7 @@ var Posy = 0
 var Player = null
 var Player_Heath = 100
 
-
+var player_text = ""
 
 
 

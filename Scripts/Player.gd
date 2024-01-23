@@ -37,7 +37,10 @@ func _process(_delta):
 	velocity.y += gravity
 	velocity = move_and_slide(velocity, Vector2.UP)
 	UpdateAnimation()
-
+	
+	
+	
+	$ActionText.text = Global.player_text
 
 func UpdateAnimation():
 	if is_on_floor():
