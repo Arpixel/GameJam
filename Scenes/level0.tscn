@@ -315,7 +315,7 @@ position = Vector2( 128, -32 )
 position = Vector2( 298, -19 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( -81, -20 )
+position = Vector2( 71, -17 )
 __meta__ = {
 "_edit_group_": true
 }
