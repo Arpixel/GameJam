@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://PixelArts/Camera_Uc.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Ana_Camera.png" type="Texture" id=2]
@@ -7,6 +7,21 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.5, 6.5 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "AlarmOffAnim"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite 00/Light2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "AlarmOnAnim"
@@ -54,6 +69,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ -35.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite 00/Light2D:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
 
 [node name="Camera" type="StaticBody2D"]
 collision_layer = 32
@@ -85,6 +112,7 @@ rotation = 1.5708
 scale = Vector2( 1, 5 )
 texture = ExtResource( 3 )
 texture_scale = 0.05
+color = Color( 1, 0, 0, 1 )
 energy = 0.75
 shadow_enabled = true
 __meta__ = {
@@ -125,6 +153,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "CameraAnim"
+anims/AlarmOffAnim = SubResource( 5 )
 anims/AlarmOnAnim = SubResource( 4 )
 anims/CameraAnim = SubResource( 2 )
 anims/RESET = SubResource( 3 )
