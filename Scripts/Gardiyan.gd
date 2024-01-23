@@ -5,6 +5,7 @@ var dir = 0
 var speed = 70
 var Gravity = 15
 var Attack = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -12,15 +13,16 @@ func _ready():
 func _process(delta):
 	GardianAI()
 	_UpdateAnim()
-	
+	print(dir)
 func GardianAI():
-	if Aktif == true:
+	if Aktif == true and Attack == false:
 		if Global.Player.global_position.x > position.x:
 			dir = 1
 		else:
 			dir = 0
 		if Global.Player.global_position.x < position.x:
 			dir = -1
+
 
 		velocity.x = speed *dir
 		velocity.y += Gravity
@@ -34,15 +36,21 @@ func _on_Alan_body_entered(body):
 func _on_Alan_body_exited(body):
 	if body.name == "Player":
 		Aktif = false
+		dir = 0
 
 
 func _UpdateAnim():
-	if dir == 1:
-		pass
-	if dir == 0:
+	if Attack == false:
+		if dir == 1 :
+			$AnimatedSprite.flip_h = false
+			$AnimatedSprite.play("Walk")
+		if dir == 0:
+			$AnimatedSprite.play("Idle")
+		if dir == -1 :
+			$AnimatedSprite.flip_h = true
+			$AnimatedSprite.play("Walk")
+	else:
 		$AnimatedSprite.play("Idle")
-	if dir == -1:
-		pass
 
 
 		
@@ -50,6 +58,7 @@ func _UpdateAnim():
 func _on_Attack_body_entered(body):
 	if body.name == "Player":
 		Attack = true
+		
 		Global.Player_Heath -= 10
 		$AttackTimer.start()
 	
@@ -68,3 +77,8 @@ func _on_AttackTimer_timeout():
 func _on_Attack_body_exited(body):
 	if body.name == "Player":
 		Attack = false
+		Attack = false
+		
+
+
+
