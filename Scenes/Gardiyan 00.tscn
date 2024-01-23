@@ -45,34 +45,42 @@ atlas = ExtResource( 1 )
 region = Rect2( 432, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=15]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=16]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 48, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=17]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 96, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=18]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 144, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=19]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 192, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=20]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 240, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=21]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 288, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=22]
+flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 336, 0, 48, 48 )
 
@@ -113,6 +121,7 @@ animation = "Idle"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 2.274 )
 shape = SubResource( 23 )
 one_way_collision_margin = 0.0
@@ -124,6 +133,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Alan"]
+visible = false
 position = Vector2( 0.5, 3.5 )
 shape = SubResource( 13 )
 
@@ -131,6 +141,7 @@ shape = SubResource( 13 )
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack"]
+visible = false
 position = Vector2( 0.5, 0 )
 shape = SubResource( 14 )
 
