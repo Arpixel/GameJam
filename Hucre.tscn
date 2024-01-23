@@ -223,7 +223,6 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 18, -21 )
 __meta__ = {
 "_edit_lock_": true
 }
