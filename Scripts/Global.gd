@@ -39,3 +39,9 @@ func Load_Game():
 	Player_Heath = data["Player_Heath"]
 	keycard = data["keycard"]
 	save_file.close()#dosyayı kapattık
+
+
+
+func Checkpoint():
+	Global.Posx = Player.global_position.x
+	Global.Posy = Player.global_position.y
