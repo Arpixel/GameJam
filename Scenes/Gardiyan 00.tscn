@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/Gardiyan/Idle/Idle Sprite Sheet.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Gardiyan.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -50,10 +51,37 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=12]
+radius = 9.0
+height = 14.0
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 79.5, 13.5 )
+
 [node name="Gardiyan 00" type="KinematicBody2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 5
+frame = 8
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 12 )
+
+[node name="Alan" type="Area2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alan"]
+position = Vector2( 1.5, 3.5 )
+shape = SubResource( 13 )
+
+[connection signal="body_entered" from="Alan" to="." method="_on_Alan_body_entered"]
+[connection signal="body_exited" from="Alan" to="." method="_on_Alan_body_exited"]
