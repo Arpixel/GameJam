@@ -2,7 +2,7 @@
 
 [ext_resource path="res://PixelArts/Door2.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Room1Giris.gd" type="Script" id=2]
-[ext_resource path="res://PixelArts/Key.png" type="Texture" id=3]
+[ext_resource path="res://PixelArts/OrangeLock.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 19, 32 )
@@ -20,12 +20,17 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Button" type="Button" parent="Room1Giris"]
-margin_left = -19.0
-margin_top = -7.0
-margin_right = 25.0
-margin_bottom = 31.0
-icon = ExtResource( 3 )
+margin_left = -12.0
+margin_top = -18.0
+margin_bottom = 2.0
+rect_scale = Vector2( 2, 2 )
 flat = true
 
+[node name="Sprite2" type="Sprite" parent="Room1Giris"]
+position = Vector2( -9.53674e-07, 1.90735e-06 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
 [connection signal="body_entered" from="Room1Giris" to="Room1Giris" method="_on_Room1Giris_body_entered"]
+[connection signal="body_exited" from="Room1Giris" to="Room1Giris" method="_on_Room1Giris_body_exited"]
 [connection signal="pressed" from="Room1Giris/Button" to="Room1Giris" method="_on_Button_pressed"]
