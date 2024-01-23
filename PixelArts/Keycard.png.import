@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hucre (1).png-24ed80cc2a65b9e2586988d1d60b6953.stex"
+path="res://.import/Keycard.png-ebcefcaec8476b1a792275a2415827c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PixelArts/Hucre (1).png"
-dest_files=[ "res://.import/Hucre (1).png-24ed80cc2a65b9e2586988d1d60b6953.stex" ]
+source_file="res://PixelArts/Keycard.png"
+dest_files=[ "res://.import/Keycard.png-ebcefcaec8476b1a792275a2415827c4.stex" ]
 
 [params]
 
