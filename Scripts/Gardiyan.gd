@@ -10,14 +10,17 @@ var Attack = false
 
 
 func _process(_delta):
-	
 	GardianAI()
 	_UpdateAnim()
+	
 	print(dir)
 
 
 func GardianAI():
-	if Aktif == true and Attack == false or Global.alarm_system == true:
+	if Global.Player_Crouch == true:
+		Aktif = false
+		dir = 0
+	elif Aktif == true and Attack == false or Global.alarm_system == true:
 		if Global.Player.global_position.x > position.x:
 			dir = 1
 		else:
