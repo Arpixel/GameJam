@@ -7,7 +7,7 @@ var kaybol = false
 # Kaybol değişkeni queue_free() tetikler
 
 func _process(_delta):
-	if kaybol == true:
+	if Global.Turuncu_key == true:
 		queue_free()
 
 # Eğer Area2D(Keycard) alanına Player girerse
@@ -15,4 +15,5 @@ func _process(_delta):
 func _on_Key_body_entered(body):
 	if body.name == "Player":
 		kaybol = true
-		Global.key = true
+		Global.Turuncu_key = true
+		Global.Save_Game()
