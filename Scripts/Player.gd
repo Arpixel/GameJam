@@ -8,8 +8,10 @@ var jump_strength = -250
 var dir = 0
 
 
-
+func _ready():
+	Global.Player = self
 func _process(_delta):
+	$ProgressBar.value = Global.Player_Heath
 	if Input.is_action_pressed("D"):
 		dir = 1
 	else:
