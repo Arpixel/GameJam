@@ -157,3 +157,8 @@ anims/AlarmOffAnim = SubResource( 5 )
 anims/AlarmOnAnim = SubResource( 4 )
 anims/CameraAnim = SubResource( 2 )
 anims/RESET = SubResource( 3 )
+
+[node name="AlarmTime" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="AlarmTime" to="." method="_on_AlarmTime_timeout"]
