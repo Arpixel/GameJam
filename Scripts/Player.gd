@@ -11,7 +11,7 @@ var dir = 0
 func _ready():
 	Global.Player = self
 	Global.Player_Heath = 100
-	Global.key = false
+	Global.Turuncu_key = false
 	Global.keycard = false
 
 func _process(_delta):
