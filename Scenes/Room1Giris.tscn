@@ -14,12 +14,16 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Room1Giris"]
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1Giris"]
 visible = false
 shape = SubResource( 1 )
 
 [node name="Button" type="Button" parent="Room1Giris"]
+visible = false
 margin_left = -12.0
 margin_top = -18.0
 margin_bottom = 2.0
@@ -27,10 +31,9 @@ rect_scale = Vector2( 2, 2 )
 flat = true
 
 [node name="Sprite2" type="Sprite" parent="Room1Giris"]
-position = Vector2( -9.53674e-07, 1.90735e-06 )
-scale = Vector2( 2, 2 )
+position = Vector2( 0.25, 0.250002 )
+scale = Vector2( 1.98438, 1.98438 )
 texture = ExtResource( 3 )
 
 [connection signal="body_entered" from="Room1Giris" to="Room1Giris" method="_on_Room1Giris_body_entered"]
-[connection signal="body_exited" from="Room1Giris" to="Room1Giris" method="_on_Room1Giris_body_exited"]
 [connection signal="pressed" from="Room1Giris/Button" to="Room1Giris" method="_on_Button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://PixelArts/ZeminTaban.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Zemin.png" type="Texture" id=2]
@@ -9,11 +9,11 @@
 [ext_resource path="res://PixelArts/Kup.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=8]
 [ext_resource path="res://PixelArts/Door.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/Key.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/Keycard.tscn" type="PackedScene" id=11]
 [ext_resource path="res://PixelArts/Door2.png" type="Texture" id=12]
 [ext_resource path="res://PixelArts/lighteffect.png" type="Texture" id=13]
-[ext_resource path="res://Scenes/Gardiyan 00.tscn" type="PackedScene" id=14]
+[ext_resource path="res://PixelArts/KeyOrange.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/Room1Giris.tscn" type="PackedScene" id=15]
 [ext_resource path="res://PixelArts/Tavan2.png" type="Texture" id=16]
 
@@ -199,6 +199,41 @@ polygon = PoolVector2Array( 337, -24, 361, -24, 361, -1, 337, -1 )
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 16, 16 )
 
+[sub_resource type="CircleShape2D" id=17]
+radius = 11.0
+
+[sub_resource type="Animation" id=18]
+resource_name = "KeyAnim"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Key:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -3 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Key:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
 [node name="level0" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
@@ -302,17 +337,50 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Key" type="Area2D" parent="."]
+position = Vector2( 349, -40 )
+collision_layer = 16
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D" type="Light2D" parent="Key"]
+position = Vector2( -4, 4 )
+texture = ExtResource( 13 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Key" type="Sprite" parent="Key"]
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
+visible = false
+position = Vector2( -4, 4 )
+shape = SubResource( 17 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Key"]
+autoplay = "KeyAnim"
+anims/KeyAnim = SubResource( 18 )
+anims/RESET = SubResource( 19 )
+
 [node name="Room1Giris" parent="." instance=ExtResource( 15 )]
 position = Vector2( 128, -32 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 71, -17 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Key" parent="." instance=ExtResource( 10 )]
-position = Vector2( 352, -42 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -330,5 +398,4 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Gardiyan 00" parent="." instance=ExtResource( 14 )]
-position = Vector2( 691, -22 )
+[connection signal="body_entered" from="Key" to="Key" method="_on_Key_body_entered"]

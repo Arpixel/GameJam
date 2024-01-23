@@ -214,9 +214,6 @@ __meta__ = {
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( -48, -23 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -0.5, -9.5 )
