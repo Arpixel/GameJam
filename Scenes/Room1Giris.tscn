@@ -20,7 +20,6 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Button" type="Button" parent="Room1Giris"]
-visible = false
 margin_left = -19.0
 margin_top = -7.0
 margin_right = 25.0
