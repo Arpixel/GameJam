@@ -11,7 +11,7 @@ func _process(_delta):
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		Hucre_Kapisi_Aktif = true
-		$Player/Player/ActionText.text = "press e to enter"
+		$Player/Player/ActionText.text = "Press E to enter"
 
 
 func _on_Area2D_body_exited(body):
