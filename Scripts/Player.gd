@@ -10,8 +10,14 @@ var dir = 0
 
 func _ready():
 	Global.Player = self
+	Global.Player_Heath = 100
 func _process(_delta):
 	$ProgressBar.value = Global.Player_Heath
+	
+	if Global.Player_Heath <= 0:
+		get_tree().reload_current_scene()
+	
+	
 	if Input.is_action_pressed("D"):
 		dir = 1
 	else:

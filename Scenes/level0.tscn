@@ -269,7 +269,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 322, -18 )
+position = Vector2( 117, -20 )
 __meta__ = {
 "_edit_group_": true
 }
