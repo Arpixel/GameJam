@@ -40,17 +40,18 @@ func _process(_delta):
 
 
 func UpdateAnimation():
-	if is_on_floor():
-		if dir == 1:
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("Walk")
-		if dir == 0:
-			$AnimatedSprite.play("default")
-		if dir == -1:
-			$AnimatedSprite.flip_h = true
-			$AnimatedSprite.play("Walk")
-	if Input.is_action_pressed("ui_select"):
-		$AnimatedSprite.play("Jump")
+	if Global.Player_Crouch == false:
+		if is_on_floor():
+			if dir == 1:
+				$AnimatedSprite.flip_h = false
+				$AnimatedSprite.play("Walk")
+			if dir == 0:
+				$AnimatedSprite.play("default")
+			if dir == -1:
+				$AnimatedSprite.flip_h = true
+				$AnimatedSprite.play("Walk")
+		if Input.is_action_pressed("ui_select"):
+			$AnimatedSprite.play("Jump")
 
 func ReloadPosition():
 	global_position.x = Global.Posx

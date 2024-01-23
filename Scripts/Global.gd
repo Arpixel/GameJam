@@ -3,6 +3,8 @@ extends Node2D
 var Turuncu_key = false
 var keycard = false
 
+var Player_Crouch = false
+
 var alarm_system = false
 var Posx = 0
 var Posy = 0
