@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lighteffect.png-b4be0b7eaddbd93ece69cc96422fdb8e.stex"
+path="res://.import/Light_Ucgen.png-cfeed68cb03b78064fa29742808e0910.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PixelArts/lighteffect.png"
-dest_files=[ "res://.import/lighteffect.png-b4be0b7eaddbd93ece69cc96422fdb8e.stex" ]
+source_file="res://PixelArts/Light_Ucgen.png"
+dest_files=[ "res://.import/Light_Ucgen.png-cfeed68cb03b78064fa29742808e0910.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

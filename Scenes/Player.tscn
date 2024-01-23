@@ -7,17 +7,14 @@
 [ext_resource path="res://PixelArts/lighteffect.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=21]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 48, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 96, 0, 48, 48 )
 
@@ -115,9 +112,17 @@ animations = [ {
 extents = Vector2( 9.5, 15 )
 
 [node name="Player" type="Node2D"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Player" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Light2D" type="Light2D" parent="Player"]
 texture = ExtResource( 5 )
@@ -125,22 +130,36 @@ texture_scale = 0.5
 energy = 0.3
 shadow_enabled = true
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+visible = false
 rotating = true
 current = true
 zoom = Vector2( 0.3, 0.3 )
 smoothing_enabled = true
 smoothing_speed = 4.0
 offset_v = -0.85
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 modulate = Color( 0.564706, 0.564706, 0.564706, 1 )
 frames = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 visible = false
 position = Vector2( -1.5, 1 )
 shape = SubResource( 12 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
