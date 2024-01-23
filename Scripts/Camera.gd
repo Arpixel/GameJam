@@ -12,3 +12,8 @@ func _process(_delta):
 		if raycast_01.is_colliding() or raycast_00.is_colliding():
 			anim_player.play("AlarmOnAnim")
 			Global.alarm_system = true
+			$AlarmTime.start()
+
+
+func _on_AlarmTime_timeout():
+	Global.alarm_system = false
