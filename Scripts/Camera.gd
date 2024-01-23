@@ -16,7 +16,9 @@ func _process(_delta):
 	if Global.alarm_system == true:
 		anim_player.play("Alarm_System")
 
-
-func _on_AlarmTime_timeout():
 	if Global.alarm_system == false:
 		anim_player.play("CameraAnim")
+
+
+func _on_AlarmTime_timeout():
+	Global.alarm_system = false
