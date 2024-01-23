@@ -1,11 +1,27 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://PixelArts/Camera_Uc.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Ana_Camera.png" type="Texture" id=2]
 [ext_resource path="res://PixelArts/Light_Ucgen.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.5, 6.5 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "AlarmOnAnim"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite 00/Light2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "CameraAnim"
@@ -38,8 +54,21 @@ tracks/0/keys = {
 "update": 0,
 "values": [ -35.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite 00/Light2D:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Camera" type="StaticBody2D"]
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -61,13 +90,37 @@ __meta__ = {
 }
 
 [node name="Light2D" type="Light2D" parent="Sprite 00"]
-position = Vector2( -134, 0 )
+position = Vector2( -134, 3.8147e-06 )
 rotation = 1.5708
 scale = Vector2( 1, 5 )
 texture = ExtResource( 3 )
 texture_scale = 0.05
 energy = 0.75
 shadow_enabled = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="RayCast2D 01" type="RayCast2D" parent="Sprite 00"]
+position = Vector2( -6, 0 )
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( 25.5, 256 )
+collision_mask = 8
+collide_with_areas = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="RayCast2D 00" type="RayCast2D" parent="Sprite 00"]
+position = Vector2( -6, 0 )
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( -25.5, 256 )
+collision_mask = 8
+collide_with_areas = true
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -84,5 +137,6 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "CameraAnim"
+anims/AlarmOnAnim = SubResource( 4 )
 anims/CameraAnim = SubResource( 2 )
 anims/RESET = SubResource( 3 )
