@@ -3,7 +3,7 @@ extends Area2D
 
 func _on_Room1Giris_body_entered(body):
 	if body.name == "Player":
-		$Sprite2.visible = true
+		pass
 		if Global.key == true:
 			$Button.visible = true
 
