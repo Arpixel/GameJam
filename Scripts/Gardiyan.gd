@@ -10,7 +10,7 @@ var Attack = false
 func _ready():
 	pass
 	
-func _process(delta):
+func _process(_delta):
 	GardianAI()
 	_UpdateAnim()
 	print(dir)
@@ -26,7 +26,7 @@ func GardianAI():
 
 		velocity.x = speed *dir
 		velocity.y += Gravity
-		move_and_slide(velocity, Vector2.UP)
+		velocity = move_and_slide(velocity, Vector2.UP)
 
 func _on_Alan_body_entered(body):
 	if body.name == "Player":
