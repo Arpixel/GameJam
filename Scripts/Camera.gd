@@ -17,3 +17,6 @@ func _process(_delta):
 
 func _on_AlarmTime_timeout():
 	Global.alarm_system = false
+	anim_player.play("AlarmOffAnim")
+	yield(anim_player, "animation_finished")
+	anim_player.play("CameraAnim")
