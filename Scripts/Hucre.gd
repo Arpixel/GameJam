@@ -12,7 +12,7 @@ func _ready():
 
 
 func _process(delta):
-	if Input.is_action_pressed("E"):
+	if Input.is_action_pressed("E") and Aktif == true:
 		get_tree().change_scene("res://Scenes/level0.tscn")
 
 

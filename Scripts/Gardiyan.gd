@@ -11,6 +11,7 @@ func _ready():
 	pass
 	
 func _process(_delta):
+	velocity.y += Gravity
 	GardianAI()
 	_UpdateAnim()
 	print(dir)
@@ -25,7 +26,7 @@ func GardianAI():
 
 
 		velocity.x = speed *dir
-		velocity.y += Gravity
+		
 		velocity = move_and_slide(velocity, Vector2.UP)
 
 func _on_Alan_body_entered(body):
