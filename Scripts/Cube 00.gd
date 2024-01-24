@@ -7,7 +7,7 @@ var Aktif = false
 func _process(_delta):
 	if Input.is_action_just_pressed("E") and Aktif == true and Global.Player_Crouch == false:
 		Global.Player_Crouch = true
-	elif Input.is_action_just_pressed("E") and Aktif == true and Global.Player_Crouch == true:
+	elif Input.is_action_just_pressed("E") and Global.Player_Crouch == true:
 		Global.Player_Crouch = false
 
 
