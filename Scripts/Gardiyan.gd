@@ -19,7 +19,9 @@ func _process(_delta):
 func GardianAI():
 	if Global.Player_Crouch == true:
 		Aktif = false
+		Attack = false
 		dir = 0
+	
 	elif Aktif == true and Attack == false or Global.alarm_system == true:
 		if Global.Player.global_position.x > position.x:
 			dir = 1
