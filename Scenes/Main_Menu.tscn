@@ -73,7 +73,8 @@ custom_fonts/font = SubResource( 13 )
 text = "PLAY"
 flat = true
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Button3" type="Button" parent="."]
@@ -81,12 +82,15 @@ margin_left = -2.0
 margin_top = 400.0
 margin_right = 1278.0
 margin_bottom = 480.0
+focus_mode = 0
 custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
 custom_fonts/font = SubResource( 13 )
+enabled_focus_mode = 0
 text = "NEW GAME"
 flat = true
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Button2" type="Button" parent="."]
@@ -101,7 +105,8 @@ custom_fonts/font = SubResource( 13 )
 text = "EXIT"
 flat = true
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
