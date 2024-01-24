@@ -14,8 +14,10 @@ func _process(_delta):
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		Aktif = true
+		Global.player_text = "Press E to crouch"
 
 
 func _on_Area2D_body_exited(body):
 	if body.name == "Player":
 		Aktif = false
+		Global.player_text = ""
