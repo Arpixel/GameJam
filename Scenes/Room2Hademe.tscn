@@ -352,14 +352,14 @@ position = Vector2( -78, -34 )
 [node name="Player" parent="." instance=ExtResource( 20 )]
 position = Vector2( 98, -19 )
 
-[node name="Room1Cikis" type="Node2D" parent="."]
+[node name="Room2Cikis" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="Room1Cikis"]
+[node name="Area2D" type="Area2D" parent="Room2Cikis"]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1Cikis/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2Cikis/Area2D"]
 visible = false
 position = Vector2( 96.5, -26 )
 shape = SubResource( 16 )
@@ -368,5 +368,5 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Toilet/Button" to="Toilet" method="_on_Button_pressed"]
-[connection signal="body_entered" from="Room1Cikis/Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Room1Cikis/Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Room2Cikis/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Room2Cikis/Area2D" to="." method="_on_Area2D_body_exited"]
