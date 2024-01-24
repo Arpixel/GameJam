@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/SkibidiToilet.gd" type="Script" id=1]
 [ext_resource path="res://PixelArts/Duvar.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://PixelArts/Door3.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scripts/Room2Hademe.gd" type="Script" id=21]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -366,6 +367,8 @@ shape = SubResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="PauseMenu" parent="." instance=ExtResource( 22 )]
 
 [connection signal="pressed" from="Toilet/Button" to="Toilet" method="_on_Button_pressed"]
 [connection signal="body_entered" from="Room2Cikis/Area2D" to="." method="_on_Area2D_body_entered"]

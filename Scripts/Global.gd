@@ -5,7 +5,8 @@ var RedKey = false
 var Turuncu_key = false
 var keycard = false
 
-
+var menu_engelle = true
+var menukapa = true
 
 var Player_Crouch = false
 
