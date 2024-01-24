@@ -1,14 +1,22 @@
 extends Node2D
 
+# ANAHTAR
+
 var BlueKey = false
 var RedKey = false
 var Turuncu_key = false
 var keycard = false
 
+# MENÜ
+
 var menu_engelle = true
 var menukapa = true
 
+# VENT
+
 var Player_Crouch = false
+
+# KAMERA
 
 var alarm_system = false
 var Posx = 0

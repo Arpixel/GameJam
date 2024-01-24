@@ -9,6 +9,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("E") and Aktif == true and Global.Player_Crouch == false:
 		Global.Player_Crouch = true
 		AnimSprite.play("Hide")
+		
 	elif Input.is_action_just_pressed("E") and Global.Player_Crouch == true:
 		Global.Player_Crouch = false
 		AnimSprite.play("default")
