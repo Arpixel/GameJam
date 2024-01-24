@@ -55,7 +55,7 @@ __meta__ = {
 
 [node name="Light2D" type="Light2D" parent="Keycard"]
 texture = ExtResource( 1 )
-texture_scale = 0.2
+texture_scale = 3.0
 energy = 0.75
 __meta__ = {
 "_edit_group_": true,

@@ -51,7 +51,7 @@ __meta__ = {
 [node name="Light2D" type="Light2D" parent="Key"]
 position = Vector2( -4, 4 )
 texture = ExtResource( 2 )
-texture_scale = 0.2
+texture_scale = 3.0
 energy = 0.75
 __meta__ = {
 "_edit_group_": true,

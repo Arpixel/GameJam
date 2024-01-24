@@ -246,7 +246,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 16.5, 26 )
+extents = Vector2( 16.5, 26.5 )
 
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 19, 32 )
@@ -509,17 +509,11 @@ anims/RESET = SubResource( 19 )
 script = ExtResource( 11 )
 
 [node name="Room2Area" type="Area2D" parent="Room2Giris"]
-position = Vector2( 1023, 0 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2( 1120, -27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room2Giris/Room2Area"]
-position = Vector2( 96.5, -26 )
+position = Vector2( 0, 0.5 )
 shape = SubResource( 30 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Room1Giris" parent="." instance=ExtResource( 15 )]
 position = Vector2( 128, -32 )

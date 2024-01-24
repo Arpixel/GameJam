@@ -18,8 +18,6 @@ var Player_Heath = 100
 var player_text = ""
 
 
-
-
 func Save_Game():
 	var save_file = File.new()#Dosya oluşturduk
 	save_file.open("user://save_file.save",File.WRITE)#Dosyaya yazdırdık

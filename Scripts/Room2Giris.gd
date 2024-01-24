@@ -3,6 +3,10 @@ extends Node2D
 var Hucre_Kapisi_Aktif = true
 onready var Hucre_Kapisi = $Room2Area
 
+func _ready():
+	Hucre_Kapisi = false
+	Hucre_Kapisi_Aktif = false
+
 func _process(_delta):
 	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true:
 		get_tree().change_scene("res://Scenes/Room2Hademe.tscn")
