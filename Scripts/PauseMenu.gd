@@ -10,8 +10,10 @@ func _process(_delta):
 		$CanvasLayer.visible = false
 	elif Global.menukapa == false:
 		$CanvasLayer.visible = true
+		get_tree().paused = true
 	elif Global.menukapa == true:
 		$CanvasLayer.visible = false
+		get_tree().paused = false
 	
 	if Input.is_action_just_pressed("Pause") and Global.menu_engelle == false:
 		Global.menukapa = false
