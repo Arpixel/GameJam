@@ -36,8 +36,8 @@ func Save_Game():
 	 "Turuncu_key":Turuncu_key,
 	 "Player_Heath": Player_Heath,
 	 "keycard":keycard,
-	"BlueKey":BlueKey,
-	"RedKey": RedKey
+	 "BlueKey":BlueKey,
+	  "RedKey": RedKey
 	}
 	save_file.store_var(data)
 	save_file.close()#dosyayı kapattık
