@@ -10,6 +10,10 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true and Global.alarm_system == false:
 		get_tree().change_scene("res://Scenes/Room2Hademe.tscn")
+		Global.ReloadPosition()
+		Global.Checkpoint()
+		Global.Save_Game()
+
 
 func _on_Room2Area_body_entered(body):
 	if body.name == "Player":

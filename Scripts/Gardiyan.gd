@@ -61,13 +61,13 @@ func _on_Attack_body_entered(body):
 	if body.name == "Player" and Global.Player_Crouch == false:
 		Attack = true
 
-		Global.Player_Heath -= 10
+		Global.Player_Heath -= 5
 		$AttackTimer.start()
 
 
 func _on_AttackTimer_timeout():
 	if Attack == true:
-		Global.Player_Heath -= 10
+		Global.Player_Heath -= 5
 
 		$AttackTimer.start()
 

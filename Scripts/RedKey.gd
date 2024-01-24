@@ -17,3 +17,4 @@ func _on_Key_body_entered(body):
 		kaybol = true
 		Global.RedKey = true
 		Global.Save_Game()
+		Global.ReloadPosition()

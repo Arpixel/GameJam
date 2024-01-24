@@ -249,6 +249,9 @@ font_data = ExtResource( 21 )
 
 [node name="level0" type="Node2D"]
 script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.698039, 0.698039, 0.698039, 1 )
@@ -300,15 +303,15 @@ scale = Vector2( 1, -1 )
 [node name="Camera3" parent="CevreTasarim/Kameralar" instance=ExtResource( 8 )]
 position = Vector2( 1077, -121 )
 
+[node name="Cube 01" parent="CevreTasarim" instance=ExtResource( 7 )]
+position = Vector2( 1177, -16 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Cubes" type="Node2D" parent="CevreTasarim"]
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
-
-[node name="Cube 00" parent="CevreTasarim/Cubes" instance=ExtResource( 7 )]
-position = Vector2( 512, -16 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Hucre_Kapisi" type="Node2D" parent="CevreTasarim"]
 position = Vector2( -31, 0 )
@@ -333,12 +336,11 @@ __meta__ = {
 }
 
 [node name="Key" type="Area2D" parent="."]
-position = Vector2( 512, -48 )
+position = Vector2( 514, -19 )
 collision_layer = 16
 script = ExtResource( 10 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="Light2D" type="Light2D" parent="Key"]
@@ -463,11 +465,21 @@ margin_right = 1590.0
 margin_bottom = -53.0
 custom_fonts/font = SubResource( 23 )
 text = "You must find the
- BlueKey and Keycard
- to open elevator."
+ BlueKey to open elevator."
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 1040.0
+margin_top = -80.0
+margin_right = 1220.0
+margin_bottom = -65.0
+custom_fonts/font = SubResource( 23 )
+text = "You can hide on vents"
+__meta__ = {
+"_edit_group_": true
 }
 
 [node name="PauseMenu" parent="." instance=ExtResource( 18 )]
