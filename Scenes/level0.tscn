@@ -317,10 +317,6 @@ __meta__ = {
 
 [node name="Cube 00" parent="CevreTasarim/Cubes" instance=ExtResource( 7 )]
 position = Vector2( 512, -16 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="Hucre_Kapisi" type="Node2D" parent="CevreTasarim"]
 position = Vector2( -31, 0 )

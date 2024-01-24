@@ -9,42 +9,52 @@
 [ext_resource path="res://Sprites/Character/Crouch Idle/Crouch Idle Sprite Sheet.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=27]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=28]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 48, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=29]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 96, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=30]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 144, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=31]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 192, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=32]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 240, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=33]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 288, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=34]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 336, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=35]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 384, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=36]
+flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 432, 0, 48, 48 )
 
@@ -92,7 +102,7 @@ region = Rect2( 288, 0, 48, 48 )
 atlas = ExtResource( 3 )
 region = Rect2( 336, 0, 48, 48 )
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 48, 48 )
 
@@ -132,7 +142,7 @@ region = Rect2( 384, 0, 48, 48 )
 atlas = ExtResource( 1 )
 region = Rect2( 432, 0, 48, 48 )
 
-[sub_resource type="SpriteFrames" id=11]
+[sub_resource type="SpriteFrames" id=37]
 animations = [ {
 "frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
 "loop": true,
@@ -149,7 +159,7 @@ animations = [ {
 "name": "Walk",
 "speed": 15.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 11 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "default",
 "speed": 12.0
@@ -207,7 +217,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 modulate = Color( 0.564706, 0.564706, 0.564706, 1 )
-frames = SubResource( 11 )
+frames = SubResource( 37 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
