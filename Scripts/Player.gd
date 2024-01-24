@@ -14,7 +14,7 @@ func _ready():
 	ReloadPosition()
 	global_position.y = -10
 	Global.Player = self
-	Global.Player_Heath = 100
+	
 
 func _process(_delta):
 	$ProgressBar.value = Global.Player_Heath

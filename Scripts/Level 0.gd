@@ -6,7 +6,7 @@ func _ready():
 	Global.Load_Game()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true:
+	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true and Global.alarm_system == false:
 		Global.Checkpoint()
 		Global.Save_Game()
 		get_tree().change_scene("res://Scenes/Hucre.tscn")
