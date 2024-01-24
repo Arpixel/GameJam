@@ -317,6 +317,7 @@ __meta__ = {
 
 [node name="Cube 00" parent="CevreTasarim/Cubes" instance=ExtResource( 7 )]
 position = Vector2( 512, -16 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Hucre_Kapisi" type="Node2D" parent="CevreTasarim"]
 position = Vector2( -31, 0 )
