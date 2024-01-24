@@ -436,10 +436,9 @@ position = Vector2( 658, -17 )
 position = Vector2( 1516, -17 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 90, -39 )
+position = Vector2( -1, -26 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]

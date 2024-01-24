@@ -60,3 +60,7 @@ func Load_Game():
 func Checkpoint():
 	Global.Posx = Player.global_position.x
 	Global.Posy = Player.global_position.y
+	
+func ReloadPosition():
+	Player.global_position.x = Global.Posx
+	Player.global_position.y = Global.Posy
