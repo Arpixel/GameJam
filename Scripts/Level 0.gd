@@ -4,6 +4,7 @@ var Hucre_Kapisi_Aktif = true
 onready var Hucre_Kapisi = $CevreTasarim/Hucre_Kapisi/Area2D
 func _ready():
 	Global.Load_Game()
+	Global.Posy -= 10
 	Global.ReloadPosition()
 
 

@@ -26,19 +26,18 @@ var Player_Heath = 100
 
 var player_text = ""
 
+
 func Save_Game():
 	var save_file = File.new()#Dosya oluşturduk
 	save_file.open("user://save_file.save",File.WRITE)#Dosyaya yazdırdık
 	var data = {
-	
 	 "Posx":Posx,
 	 "Posy":Posy,
 	 "Turuncu_key":Turuncu_key,
 	 "Player_Heath": Player_Heath,
 	 "keycard":keycard,
-	"BlueKey":BlueKey,
-	"RedKey": RedKey
-	
+	 "BlueKey":BlueKey,
+	  "RedKey": RedKey
 	}
 	save_file.store_var(data)
 	save_file.close()#dosyayı kapattık
