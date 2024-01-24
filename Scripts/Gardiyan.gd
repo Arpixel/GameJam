@@ -17,12 +17,7 @@ func _process(_delta):
 
 
 func GardianAI():
-	if Global.Player_Crouch == true:
-		Aktif = false
-		Attack = false
-		dir = 0
-	
-	elif Aktif == true and Attack == false or Global.alarm_system == true:
+	if Aktif == true and Attack == false and Global.Player_Crouch == false or Global.alarm_system == true:
 		if Global.Player.global_position.x > position.x:
 			dir = 1
 		else:
@@ -63,7 +58,7 @@ func _UpdateAnim():
 
 
 func _on_Attack_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" and Global.Player_Crouch == false:
 		Attack = true
 
 		Global.Player_Heath -= 10
