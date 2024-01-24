@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Portal2-1x08-Haunted_Panels.mp3-ebdcfbc3328f75fe7e6fcacdd993d219.mp3str"
+
+[deps]
+
+source_file="res://Musics/Portal2-1x08-Haunted_Panels.mp3"
+dest_files=[ "res://.import/Portal2-1x08-Haunted_Panels.mp3-ebdcfbc3328f75fe7e6fcacdd993d219.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

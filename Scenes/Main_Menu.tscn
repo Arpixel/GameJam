@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Font/ChiKareGo2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Musics/Portal2-1x13-15_Acres_of_Broken_Glass.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Scripts/Main_Menu.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -70,7 +71,7 @@ custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 13 )
-text = "PLAY"
+text = "CONTINUE"
 flat = true
 __meta__ = {
 "_edit_group_": true,
@@ -108,6 +109,11 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

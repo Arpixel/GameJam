@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Portal2-1x13-15_Acres_of_Broken_Glass.mp3-466bd25102eb4bb61e7e0361049cf3b2.mp3str"
+
+[deps]
+
+source_file="res://Musics/Portal2-1x13-15_Acres_of_Broken_Glass.mp3"
+dest_files=[ "res://.import/Portal2-1x13-15_Acres_of_Broken_Glass.mp3-466bd25102eb4bb61e7e0361049cf3b2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

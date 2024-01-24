@@ -17,7 +17,7 @@ func _ready():
 	
 
 func _process(_delta):
-	
+	Global.Player_Heath += 0.01
 	
 	$ProgressBar.value = Global.Player_Heath
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://PixelArts/Duvar2.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Door2.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scripts/FoodElevator.gd" type="Script" id=15]
 [ext_resource path="res://PixelArts/RedLock.png" type="Texture" id=16]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Musics/Portal2-1x08-Haunted_Panels.mp3" type="AudioStream" id=18]
 [ext_resource path="res://PixelArts/Masa2.png" type="Texture" id=19]
 [ext_resource path="res://PixelArts/sifonyer2.png" type="Texture" id=20]
 
@@ -351,6 +352,11 @@ texture = ExtResource( 20 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1, -18 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="FoodElevator/Area2D" to="FoodElevator" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="FoodElevator/Area2D" to="FoodElevator" method="_on_Area2D_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scripts/Hucre.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://PixelArts/Lazimlik4.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://PixelArts/Map.png" type="Texture" id=16]
+[ext_resource path="res://Musics/Portal2-1x05-Technical_Difficulties.mp3" type="AudioStream" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -256,6 +257,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.741176, 0.741176, 0.741176, 0.796078 )
+position = Vector2( 40, -48 )
+scale = Vector2( 0.0644531, 0.0751953 )
+texture = ExtResource( 16 )
+
 [node name="Toilet" type="StaticBody2D" parent="."]
 position = Vector2( 48, -18 )
 script = ExtResource( 11 )
@@ -285,10 +292,10 @@ __meta__ = {
 
 [node name="PauseMenu" parent="." instance=ExtResource( 15 )]
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
-position = Vector2( 1132, 221 )
-texture = ExtResource( 16 )
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_exited"]
