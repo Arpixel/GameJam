@@ -9,13 +9,13 @@ func _ready():
 	$Area2D/Button.disabled = true
 	ColisionAktif = false
 	KilitAcildi = false
-	Global.Turuncu_key = false
+	Global.RedKey = false
 
 func _process(_delta):
 	
 	# Turuncu Key İŞLEVLİLİK
 	
-	if Global.Turuncu_key == true:
+	if Global.RedKey == true:
 		$Area2D/Button.visible = true
 		$Area2D/Button.disabled = false
 	
@@ -24,7 +24,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("E") and ColisionAktif and KilitAcildi == true:
 		Global.Checkpoint()
 		Global.Save_Game()
-		get_tree().change_scene("res://Scenes/Room1YemekOda.tscn")
+		get_tree().change_scene("res://Scenes/Level1.tscn")
 
 # GİRME
 
@@ -32,11 +32,11 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		ColisionAktif = true
 	
-		if KilitAcildi == false and Global.Turuncu_key == true:
+		if KilitAcildi == false and Global.RedKey == true:
 			Global.player_text = "Click The Lock"
 	
-		elif Global.Turuncu_key == false:
-			Global.player_text = "Find OrangeKey"
+		elif Global.RedKey == false:
+			Global.player_text = "Find RedKey"
 
 # ÇIKMA
 

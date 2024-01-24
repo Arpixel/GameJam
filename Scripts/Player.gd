@@ -13,8 +13,6 @@ func _ready():
 	global_position.y = -10
 	Global.Player = self
 	Global.Player_Heath = 100
-	Global.Turuncu_key = false
-	Global.keycard = false
 
 func _process(_delta):
 	$ProgressBar.value = Global.Player_Heath
@@ -38,8 +36,6 @@ func _process(_delta):
 	velocity.y += gravity
 	velocity = move_and_slide(velocity, Vector2.UP)
 	UpdateAnimation()
-	
-	
 	
 	$ActionText.text = Global.player_text
 

@@ -10,7 +10,7 @@ extends ColorRect
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause"):
 		var new_pause_state = not get_tree().paused
 		get_tree().paused = new_pause_state
@@ -25,12 +25,6 @@ func _on_Save_Button_pressed():
 
 func _on_Load_Button_pressed():
 	Global.Load_Game()
-
-
-
-
-
-
 
 
 func _on_Quit_pressed():

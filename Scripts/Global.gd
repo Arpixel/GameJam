@@ -1,7 +1,11 @@
 extends Node2D
 
+var BlueKey = false
+var RedKey = false
 var Turuncu_key = false
 var keycard = false
+
+
 
 var Player_Crouch = false
 
@@ -37,12 +41,12 @@ func Load_Game():
 	var data = save_file.get_var()
 	Posx = data["Posx"]
 	Posy = data["Posy"]
+	BlueKey = data["BlueKey"]
+	RedKey = data["RedKey"]
 	Turuncu_key = data["Turuncu_key"]
 	Player_Heath = data["Player_Heath"]
 	keycard = data["keycard"]
 	save_file.close()#dosyayı kapattık
-
-
 
 func Checkpoint():
 	Global.Posx = Player.global_position.x

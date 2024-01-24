@@ -9,13 +9,13 @@ func _ready():
 	$Area2D/Button.disabled = true
 	ColisionAktif = false
 	KilitAcildi = false
-	Global.Turuncu_key = false
+	Global.BlueKey = false
 
 func _process(_delta):
 	
 	# Turuncu Key İŞLEVLİLİK
 	
-	if Global.Turuncu_key == true:
+	if Global.BlueKey == true:
 		$Area2D/Button.visible = true
 		$Area2D/Button.disabled = false
 	
@@ -32,11 +32,11 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		ColisionAktif = true
 	
-		if KilitAcildi == false and Global.Turuncu_key == true:
+		if KilitAcildi == false and Global.BlueKey == true:
 			Global.player_text = "Click The Lock"
 	
-		elif Global.Turuncu_key == false:
-			Global.player_text = "Find OrangeKey"
+		elif Global.BlueKey == false:
+			Global.player_text = "Find BlueKey"
 
 # ÇIKMA
 
