@@ -4,6 +4,8 @@ var Hucre_Kapisi_Aktif = true
 onready var Hucre_Kapisi = $CevreTasarim/Hucre_Kapisi/Area2D
 func _ready():
 	Global.Load_Game()
+	Global.ReloadPosition()
+
 
 func _process(_delta):
 	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true and Global.alarm_system == false:
