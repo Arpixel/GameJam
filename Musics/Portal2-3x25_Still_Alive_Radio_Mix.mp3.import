@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Portal2-3x25_Still_Alive_Radio_Mix.mp3-71ed2799dd5fe67ae52b0e4a64f8f59c.mp3str"
+
+[deps]
+
+source_file="res://Musics/Portal2-3x25_Still_Alive_Radio_Mix.mp3"
+dest_files=[ "res://.import/Portal2-3x25_Still_Alive_Radio_Mix.mp3-71ed2799dd5fe67ae52b0e4a64f8f59c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

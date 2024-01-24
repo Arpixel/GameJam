@@ -17,16 +17,14 @@ func _ready():
 	
 
 func _process(_delta):
+	
+	
 	$ProgressBar.value = Global.Player_Heath
 	
 	if Global.Player_Heath <= 0:
-		get_tree().reload_current_scene()
-		Global.Turuncu_key = false
-		Global.RedKey = false
-		Global.BlueKey = false
-		Global.alarm_system = false
-		Global.Player_Heath = 100
-		
+		get_tree().change_scene("res://Scenes/Main_Menu.tscn")
+		Global.Player_Heath =+ 100
+	
 	
 	if Global.Player_Crouch == false:
 		player.visible = true
@@ -49,6 +47,7 @@ func _process(_delta):
 	UpdateAnimation()
 	
 	$ActionText.text = Global.player_text
+	
 
 func UpdateAnimation():
 	if is_on_floor():

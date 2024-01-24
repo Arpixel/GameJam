@@ -1,5 +1,7 @@
 extends Node2D
 
+var finished = false
+
 # ANAHTAR
 
 var BlueKey = false

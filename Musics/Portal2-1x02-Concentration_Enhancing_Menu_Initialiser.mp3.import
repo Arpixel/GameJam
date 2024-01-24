@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Portal2-1x02-Concentration_Enhancing_Menu_Initialiser.mp3-eb560212d82424a9b44942a4457bfe51.mp3str"
+
+[deps]
+
+source_file="res://Musics/Portal2-1x02-Concentration_Enhancing_Menu_Initialiser.mp3"
+dest_files=[ "res://.import/Portal2-1x02-Concentration_Enhancing_Menu_Initialiser.mp3-eb560212d82424a9b44942a4457bfe51.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

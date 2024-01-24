@@ -24,19 +24,19 @@
 [ext_resource path="res://PixelArts/Elevator.png" type="Texture" id=23]
 [ext_resource path="res://Scripts/Elevator.gd" type="Script" id=24]
 
-[sub_resource type="OccluderPolygon2D" id=25]
+[sub_resource type="OccluderPolygon2D" id=31]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=26]
+[sub_resource type="ConvexPolygonShape2D" id=32]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="OccluderPolygon2D" id=27]
+[sub_resource type="OccluderPolygon2D" id=33]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="OccluderPolygon2D" id=28]
+[sub_resource type="OccluderPolygon2D" id=34]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=29]
+[sub_resource type="ConvexPolygonShape2D" id=35]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=3]
@@ -47,18 +47,18 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/region = Rect2( 0, 0, 32, 32 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
-0/occluder = SubResource( 25 )
+0/occluder = SubResource( 31 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 26 )
+0/shape = SubResource( 32 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 26 ),
+"shape": SubResource( 32 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -69,7 +69,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 1/region = Rect2( 0, 0, 32, 32 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
-1/occluder = SubResource( 27 )
+1/occluder = SubResource( 33 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -98,18 +98,18 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 3/region = Rect2( 0, 0, 32, 32 )
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
-3/occluder = SubResource( 28 )
+3/occluder = SubResource( 34 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 29 )
+3/shape = SubResource( 35 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 29 ),
+"shape": SubResource( 35 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
@@ -262,7 +262,6 @@ __meta__ = {
 
 [node name="CevreTasarim" type="Node2D" parent="."]
 __meta__ = {
-"_edit_group_": true,
 "_edit_lock_": true
 }
 
@@ -303,15 +302,14 @@ scale = Vector2( 1, -1 )
 [node name="Camera3" parent="CevreTasarim/Kameralar" instance=ExtResource( 8 )]
 position = Vector2( 1077, -121 )
 
-[node name="Cube 01" parent="CevreTasarim" instance=ExtResource( 7 )]
-position = Vector2( 1177, -16 )
-scale = Vector2( 0.5, 0.5 )
-
 [node name="Cubes" type="Node2D" parent="CevreTasarim"]
 __meta__ = {
-"_edit_group_": true,
 "_edit_lock_": true
 }
+
+[node name="Cube 01" parent="CevreTasarim/Cubes" instance=ExtResource( 7 )]
+position = Vector2( 1049, -17 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Hucre_Kapisi" type="Node2D" parent="CevreTasarim"]
 position = Vector2( -31, 0 )
@@ -437,14 +435,6 @@ position = Vector2( 658, -17 )
 [node name="Gardiyan 01" parent="." instance=ExtResource( 20 )]
 position = Vector2( 1516, -17 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1, -26 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
-
 [node name="Label" type="Label" parent="."]
 margin_left = 268.0
 margin_top = -101.0
@@ -483,6 +473,14 @@ __meta__ = {
 }
 
 [node name="PauseMenu" parent="." instance=ExtResource( 18 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1, -26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
 [connection signal="body_entered" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_exited"]

@@ -18,4 +18,3 @@ func _on_Area2D_body_exited(body):
 	if body.name == "Player":
 		Hucre_Kapisi_Aktif = false
 		Global.player_text = ""
-

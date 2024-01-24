@@ -350,9 +350,6 @@ __meta__ = {
 [node name="RedKey" parent="." instance=ExtResource( 14 )]
 position = Vector2( -78, -34 )
 
-[node name="Player" parent="." instance=ExtResource( 20 )]
-position = Vector2( 98, -19 )
-
 [node name="Room2Cikis" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Room2Cikis"]
@@ -369,6 +366,9 @@ __meta__ = {
 }
 
 [node name="PauseMenu" parent="." instance=ExtResource( 22 )]
+
+[node name="Player" parent="." instance=ExtResource( 20 )]
+position = Vector2( 98, -19 )
 
 [connection signal="pressed" from="Toilet/Button" to="Toilet" method="_on_Button_pressed"]
 [connection signal="body_entered" from="Room2Cikis/Area2D" to="." method="_on_Area2D_body_entered"]

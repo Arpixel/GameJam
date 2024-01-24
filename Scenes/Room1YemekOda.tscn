@@ -335,9 +335,6 @@ margin_right = 34.0
 margin_bottom = 33.0
 flat = true
 
-[node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1, -18 )
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.792157, 0.792157, 0.792157, 1 )
 __meta__ = {
@@ -351,6 +348,9 @@ __meta__ = {
 position = Vector2( 477, -29 )
 scale = Vector2( 1.5, 1.78125 )
 texture = ExtResource( 20 )
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1, -18 )
 
 [connection signal="body_entered" from="FoodElevator/Area2D" to="FoodElevator" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="FoodElevator/Area2D" to="FoodElevator" method="_on_Area2D_body_exited"]

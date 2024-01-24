@@ -24,7 +24,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("E") and ColisionAktif and KilitAcildi == true and Global.alarm_system == false:
 		Global.Checkpoint()
 		Global.Save_Game()
-		get_tree().change_scene("res://Scenes/Room1YemekOda.tscn")
+		get_tree().change_scene("res://Scenes/GameFinished.tscn")
 
 # GİRME
 

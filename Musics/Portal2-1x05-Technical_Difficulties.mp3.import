@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Portal2-1x05-Technical_Difficulties.mp3-85e99fabfe24dd766a1b4d591bb53e0d.mp3str"
+
+[deps]
+
+source_file="res://Musics/Portal2-1x05-Technical_Difficulties.mp3"
+dest_files=[ "res://.import/Portal2-1x05-Technical_Difficulties.mp3-85e99fabfe24dd766a1b4d591bb53e0d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

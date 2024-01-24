@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PixelArts/Door.png" type="Texture" id=2]
@@ -16,6 +16,16 @@
 [ext_resource path="res://PixelArts/ElevatorFood.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/Cube 00.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Gardiyan 00.tscn" type="PackedScene" id=16]
+[ext_resource path="res://PixelArts/Sandalye.png" type="Texture" id=17]
+[ext_resource path="res://PixelArts/Paspas.png" type="Texture" id=18]
+[ext_resource path="res://PixelArts/sifonyer.png" type="Texture" id=19]
+[ext_resource path="res://PixelArts/Masa.png" type="Texture" id=20]
+[ext_resource path="res://PixelArts/Masa2.png" type="Texture" id=21]
+[ext_resource path="res://PixelArts/sifonyer2.png" type="Texture" id=22]
+[ext_resource path="res://PixelArts/Cube_01.png" type="Texture" id=23]
+[ext_resource path="res://PixelArts/Masa ve Sandalye.png" type="Texture" id=24]
+[ext_resource path="res://PixelArts/Chest.png" type="Texture" id=25]
+[ext_resource path="res://PixelArts/aski.png" type="Texture" id=26]
 
 [sub_resource type="OccluderPolygon2D" id=12]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -148,6 +158,118 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 6/shape_one_way_margin = 0.0
 6/shapes = [  ]
 6/z_index = 0
+7/name = "sifonyer.png 7"
+7/texture = ExtResource( 19 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Cube_01.png 8"
+8/texture = ExtResource( 23 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Masa2.png 9"
+9/texture = ExtResource( 21 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Masa ve Sandalye.png 10"
+10/texture = ExtResource( 24 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 96, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Masa.png 11"
+11/texture = ExtResource( 20 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 32, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Paspas.png 12"
+12/texture = ExtResource( 18 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Sandalye.png 13"
+13/texture = ExtResource( 17 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 32, 64 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "sifonyer2.png 14"
+14/texture = ExtResource( 22 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 32, 32 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
 
 [sub_resource type="TileSet" id=18]
 0/name = "Hucre.png 0"
@@ -193,6 +315,78 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 2/shapes = [  ]
 2/z_index = 0
 
+[sub_resource type="TileSet" id=20]
+0/name = "sifonyer.png 0"
+0/texture = ExtResource( 19 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Masa.png 1"
+1/texture = ExtResource( 20 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 47 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Paspas.png 2"
+2/texture = ExtResource( 18 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 6, 7, 22, 24 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "sifonyer2.png 3"
+3/texture = ExtResource( 22 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "sifonyer.png 4"
+4/texture = ExtResource( 19 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 19, 32 )
 
@@ -223,6 +417,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="TileMap" type="TileMap" parent="CevreTasarim"]
+tile_set = SubResource( 20 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131051, 3, 0, -131035, 0, 0, -65536, 536870915, 0, -65535, 536870916, 0, -65515, 0, 0, -65499, 3, 0 )
+
 [node name="Kameralar" type="Node2D" parent="CevreTasarim"]
 __meta__ = {
 "_edit_group_": true,
@@ -241,6 +441,10 @@ position = Vector2( 1077, -121 )
 position = Vector2( 1161, -121 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+
+[node name="Sprite" type="Sprite" parent="CevreTasarim"]
+position = Vector2( 719, -16 )
+texture = ExtResource( 18 )
 
 [node name="Room1GidisLevel1" type="Node2D" parent="."]
 script = ExtResource( 13 )
@@ -263,7 +467,7 @@ visible = false
 shape = SubResource( 19 )
 
 [node name="Cube 03" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1519, -17 )
+position = Vector2( 573, -16 )
 scale = Vector2( 0.5, 0.5 )
 __meta__ = {
 "_edit_group_": true
@@ -281,17 +485,26 @@ __meta__ = {
 
 [node name="PauseMenu" parent="." instance=ExtResource( 12 )]
 
-[node name="Gardiyan 00" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1309, -17 )
-
 [node name="Gardiyan 01" parent="." instance=ExtResource( 16 )]
-position = Vector2( 778, -18 )
+position = Vector2( 778, -17 )
 
 [node name="Gardiyan 02" parent="." instance=ExtResource( 16 )]
-position = Vector2( 380, -17 )
+position = Vector2( 379, -17 )
+
+[node name="Chest" type="Sprite" parent="."]
+position = Vector2( -16, -11.5 )
+scale = Vector2( 0.6875, 0.65625 )
+texture = ExtResource( 25 )
+
+[node name="Gardiyan 03" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1020, -17 )
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( -85, -17 )
+
+[node name="Aski" type="Sprite" parent="."]
+position = Vector2( 967, -32 )
+texture = ExtResource( 26 )
 
 [connection signal="body_entered" from="Room1GidisLevel1/Area2D" to="Room1GidisLevel1" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Room1GidisLevel1/Area2D" to="Room1GidisLevel1" method="_on_Area2D_body_exited"]
