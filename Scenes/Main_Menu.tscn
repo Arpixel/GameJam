@@ -72,19 +72,34 @@ custom_fonts/font = SubResource( 13 )
 text = "PLAY"
 flat = true
 
+[node name="Button3" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -213.0
+margin_top = 46.0
+margin_right = -130.0
+margin_bottom = 67.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 13 )
+text = "NEW GAME"
+flat = true
+
 [node name="Button2" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -120.0
-margin_top = 88.0
+margin_top = 126.0
 margin_right = -80.0
-margin_bottom = 109.0
+margin_bottom = 147.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 13 )
 text = "EXIT"
 flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

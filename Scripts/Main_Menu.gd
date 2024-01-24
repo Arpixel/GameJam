@@ -10,3 +10,8 @@ func _on_Button_pressed():
 
 func _on_Button2_pressed():
 	get_tree().quit()
+
+
+func _on_Button3_pressed():
+	Global.Save_Game()
+	get_tree().change_scene("res://Scenes/Hucre.tscn")
