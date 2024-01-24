@@ -21,10 +21,11 @@ func _process(_delta):
 	
 	if Global.Player_Heath <= 0:
 		get_tree().reload_current_scene()
-		Global.Player_Heath = 100
 		Global.Turuncu_key = false
 		Global.RedKey = false
 		Global.BlueKey = false
+		Global.alarm_system = false
+		Global.Player_Heath = 100
 		
 	
 	if Global.Player_Crouch == false:

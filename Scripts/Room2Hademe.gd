@@ -6,9 +6,6 @@ onready var Hucre_Kapisi = $Room1Cikis/Area2D
 func _process(_delta):
 	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true:
 		get_tree().change_scene("res://Scenes/level0.tscn")
-		Global.ReloadPosition()
-		Global.Checkpoint()
-		Global.Save_Game()
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":

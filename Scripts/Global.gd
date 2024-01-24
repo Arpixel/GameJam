@@ -6,7 +6,7 @@ var BlueKey = false
 var RedKey = false
 var Turuncu_key = false
 var keycard = false
-
+var YemekAsansor = false
 # MENÜ
 
 var menu_engelle = true
@@ -37,7 +37,8 @@ func Save_Game():
 	 "Player_Heath": Player_Heath,
 	 "keycard":keycard,
 	 "BlueKey":BlueKey,
-	  "RedKey": RedKey
+	 "RedKey": RedKey,
+	 "YemekAsansor":YemekAsansor
 	}
 	save_file.store_var(data)
 	save_file.close()#dosyayı kapattık
@@ -55,6 +56,7 @@ func Load_Game():
 	Turuncu_key = data["Turuncu_key"]
 	Player_Heath = data["Player_Heath"]
 	keycard = data["keycard"]
+	YemekAsansor = data["YemekAsansor"]
 	save_file.close()#dosyayı kapattık
 
 func Checkpoint():

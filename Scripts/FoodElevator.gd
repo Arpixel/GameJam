@@ -9,13 +9,12 @@ func _ready():
 	$Area2D/Button.disabled = true
 	ColisionAktif = false
 	KilitAcildi = false
-	Global.RedKey = false
 
 func _process(_delta):
 	
 	# Turuncu Key İŞLEVLİLİK
 	
-	if Global.RedKey == true:
+	if Global.YemekAsansor == true:
 		$Area2D/Button.visible = true
 		$Area2D/Button.disabled = false
 	

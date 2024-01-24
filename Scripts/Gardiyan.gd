@@ -13,7 +13,6 @@ func _process(_delta):
 	GardianAI()
 	_UpdateAnim()
 	
-	print(dir)
 
 
 func GardianAI():

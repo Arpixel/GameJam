@@ -8,6 +8,8 @@ var kaybol = false
 
 func _process(_delta):
 	if Global.RedKey == true:
+		Global.YemekAsansor = true
+		Global.Save_Game()
 		queue_free()
 
 # Eğer Area2D(Keycard) alanına Player girerse
@@ -16,5 +18,4 @@ func _on_Key_body_entered(body):
 	if body.name == "Player":
 		kaybol = true
 		Global.RedKey = true
-		Global.Save_Game()
-		Global.ReloadPosition()
+		
