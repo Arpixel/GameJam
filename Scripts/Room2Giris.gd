@@ -13,10 +13,6 @@ func _process(_delta):
 		Global.Checkpoint()
 		Global.Save_Game()
 		get_tree().change_scene("res://Scenes/Room2Hademe.tscn")
-		Global.ReloadPosition()
-		Global.Checkpoint()
-		Global.Save_Game()
-
 
 func _on_Room2Area_body_entered(body):
 	if body.name == "Player":

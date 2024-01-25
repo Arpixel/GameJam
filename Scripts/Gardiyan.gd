@@ -10,10 +10,8 @@ var Attack = false
 
 
 func _process(_delta):
-	
 	GardianAI()
 	_UpdateAnim()
-	
 
 func GardianAI():
 	if Aktif == true and Attack == false and Global.Player_Crouch == false or Global.alarm_system == true and Global.Player_Crouch == false:
@@ -60,7 +58,7 @@ func _UpdateAnim():
 func _on_Attack_body_entered(body):
 	if body.name == "Player" and Global.Player_Crouch == false:
 		Attack = true
-		Global.Player_Heath -= 10
+		Global.Player_Heath -= 4
 		$AttackTimer.start()
 	elif body.name == "Player" and Global.Player_Crouch == true:
 		Attack = false
@@ -70,7 +68,7 @@ func _on_Attack_body_entered(body):
 
 func _on_AttackTimer_timeout():
 	if Attack == true:
-		Global.Player_Heath -= 10
+		Global.Player_Heath -= 4
 		$AttackTimer.start()
 
 

@@ -25,6 +25,7 @@ func _process(_delta):
 		Global.Checkpoint()
 		Global.Save_Game()
 		get_tree().change_scene("res://Scenes/Room1YemekOda.tscn")
+		Global.Posx = 0
 
 # GİRME
 

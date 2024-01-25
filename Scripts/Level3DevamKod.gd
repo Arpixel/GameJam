@@ -12,6 +12,10 @@ var YellowDoorKilitAcildi = false
 # BAŞLANGIÇTA SIFIRLAMA
 
 func _ready():
+	Global.Load_Game()
+	Global.Posy -= 10
+	Global.ReloadPosition()
+	
 	
 	$GreenDoor/GreenButton.disabled = true
 	GreenDoorColision = false

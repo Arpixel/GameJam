@@ -1,10 +1,13 @@
-extends Area2D
+extends Node2D
 
 var Hucre_Kapisi_Aktif = true
 onready var Hucre_Kapisi = $Hucre_Kapisi/Area2D
 
 func _ready():
 	Global.menu_engelle = false
+	Global.Load_Game()
+	Global.Posy -= 10
+	Global.ReloadPosition()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true:

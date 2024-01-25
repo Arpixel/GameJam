@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://PixelArts/Duvar2.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Door2.png" type="Texture" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://PixelArts/Masa2.png" type="Texture" id=19]
 [ext_resource path="res://PixelArts/sifonyer2.png" type="Texture" id=20]
 [ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scripts/Room1YemekOda.gd" type="Script" id=22]
+[ext_resource path="res://PixelArts/Adsız.png" type="Texture" id=23]
 
 [sub_resource type="OccluderPolygon2D" id=14]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -224,6 +226,7 @@ adjustment_enabled = true
 adjustment_brightness = 0.9
 
 [node name="Room1YemekOda" type="Node2D"]
+script = ExtResource( 22 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -382,8 +385,14 @@ position = Vector2( 477, -29 )
 scale = Vector2( 1.5, 1.78125 )
 texture = ExtResource( 20 )
 
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.505882, 0.505882, 0.505882, 0.584314 )
+position = Vector2( 403.5, -56 )
+scale = Vector2( 0.0751953, 0.09375 )
+texture = ExtResource( 23 )
+
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1, -18 )
+position = Vector2( 1, -24 )
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 19 )

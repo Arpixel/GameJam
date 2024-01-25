@@ -24,6 +24,7 @@ func _on_SaveGame_pressed():
 
 func _on_LoadGame_pressed():
 	Global.Load_Game()
+	get_tree().reload_current_scene()
 
 
 func _on_MainMenu_pressed():
