@@ -252,8 +252,15 @@ font_data = ExtResource( 21 )
 [sub_resource type="Environment" id=36]
 background_mode = 4
 glow_enabled = true
+glow_levels/1 = true
+glow_levels/2 = true
+glow_levels/4 = true
+glow_levels/6 = true
+glow_levels/7 = true
 glow_bloom = 0.01
 glow_blend_mode = 0
+glow_bicubic_upscale = true
+glow_high_quality = true
 adjustment_enabled = true
 adjustment_brightness = 0.9
 
@@ -421,6 +428,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Light2D2" type="Light2D" parent="Elevator"]
+position = Vector2( 1600, -32 )
+texture = ExtResource( 26 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" parent="Elevator" instance=ExtResource( 3 )]
+position = Vector2( 49, -21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Elevator/Player"]
+
 [node name="Area2D" type="Area2D" parent="Elevator"]
 position = Vector2( 1600, -32 )
 
@@ -449,23 +473,6 @@ margin_top = -22.0
 margin_right = 18.0
 margin_bottom = 32.0
 flat = true
-
-[node name="Light2D" type="Light2D" parent="Elevator"]
-texture = ExtResource( 26 )
-texture_scale = 0.2
-energy = 0.75
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Light2D2" type="Light2D" parent="Elevator"]
-position = Vector2( 1600, -32 )
-texture = ExtResource( 26 )
-texture_scale = 0.2
-energy = 0.75
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Gardiyan 00" parent="." instance=ExtResource( 20 )]
 position = Vector2( 658, -17 )
@@ -511,21 +518,13 @@ __meta__ = {
 
 [node name="PauseMenu" parent="." instance=ExtResource( 18 )]
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1, -26 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
-
-[node name="Environment" type="WorldEnvironment" parent="."]
-environment = SubResource( 36 )
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
 volume_db = -20.0
 autoplay = true
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 36 )
 
 [connection signal="body_entered" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_exited"]
