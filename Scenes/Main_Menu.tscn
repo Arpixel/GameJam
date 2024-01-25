@@ -1,120 +1,516 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Font/ChiKareGo2.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Musics/Portal2-1x13-15_Acres_of_Broken_Glass.mp3" type="AudioStream" id=2]
+[ext_resource path="res://PixelArts/Tavan2 (1).png" type="Texture" id=3]
+[ext_resource path="res://PixelArts/Tavan2.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Main_Menu.gd" type="Script" id=5]
+[ext_resource path="res://PixelArts/Tavan3.png" type="Texture" id=6]
+[ext_resource path="res://PixelArts/Tavan.png" type="Texture" id=7]
+[ext_resource path="res://PixelArts/Zemin.png" type="Texture" id=8]
+[ext_resource path="res://PixelArts/ZeminTaban2.png" type="Texture" id=9]
+[ext_resource path="res://PixelArts/ZeminTaban.png" type="Texture" id=10]
+[ext_resource path="res://PixelArts/Duvar.png" type="Texture" id=11]
+[ext_resource path="res://PixelArts/Bed.png" type="Texture" id=12]
+[ext_resource path="res://PixelArts/Lazimlik2.png" type="Texture" id=13]
+[ext_resource path="res://PixelArts/Lazimlik3.png" type="Texture" id=14]
+[ext_resource path="res://PixelArts/Lazimlik4.png" type="Texture" id=15]
+[ext_resource path="res://PixelArts/Lazimlik.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Character/Idle/Idle Sprite Sheet.png" type="Texture" id=17]
+[ext_resource path="res://PixelArts/Hucre.png" type="Texture" id=18]
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=22]
+0/name = "Tavan2 (1).png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 15 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Tavan2.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 16 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Tavan3.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 17 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Tavan.png 3"
+3/texture = ExtResource( 7 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 18 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Zemin.png 4"
+4/texture = ExtResource( 8 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 19 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "ZeminTaban2.png 5"
+5/texture = ExtResource( 9 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 20 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "ZeminTaban.png 6"
+6/texture = ExtResource( 10 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 21 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "Duvar.png 7"
+7/texture = ExtResource( 11 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 17 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 17 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 17 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 17 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 17 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 17 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 17 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 17 )
+region = Rect2( 384, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 17 )
+region = Rect2( 432, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=42]
+animations = [ {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Flush",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 24 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 1.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 8, 14.5 )
+
+[sub_resource type="StyleBoxEmpty" id=27]
+
+[sub_resource type="StyleBoxEmpty" id=28]
+
+[sub_resource type="StyleBoxEmpty" id=29]
+
+[sub_resource type="StyleBoxEmpty" id=30]
+
+[sub_resource type="StyleBoxEmpty" id=31]
 
 [sub_resource type="DynamicFont" id=1]
-size = 128
+size = 64
 use_mipmaps = true
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=14]
-size = 48
+size = 32
 use_mipmaps = true
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=13]
-size = 64
+size = 40
+use_mipmaps = true
 font_data = ExtResource( 1 )
+
+[sub_resource type="Environment" id=43]
+background_mode = 4
+glow_enabled = true
+glow_levels/1 = true
+glow_levels/2 = true
+glow_levels/4 = true
+glow_levels/6 = true
+glow_levels/7 = true
+glow_bloom = 0.01
+glow_blend_mode = 0
+glow_bicubic_upscale = true
+glow_high_quality = true
+adjustment_enabled = true
+adjustment_brightness = 0.9
 
 [node name="Main_Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
-[node name="Background" type="ColorRect" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
-color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+[node name="TileMap 01" type="TileMap" parent="."]
+scale = Vector2( 4, 4 )
+tile_set = SubResource( 22 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -1, 6, 0, -65536, 6, 0, -65535, 6, 0, -65534, 6, 0, -65533, 6, 0, -65532, 6, 0, -65531, 6, 0, -65530, 6, 0, -65529, 6, 0, -65528, 6, 0, -65527, 6, 0, -65526, 6, 0, 65535, 6, 0, 0, 1, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, -1610612735, 0, 10, 6, 0, 131071, 6, 0, 65536, -1073741821, 0, 65537, 7, 0, 65538, 7, 0, 65539, 7, 0, 65540, 7, 0, 65541, 7, 0, 65542, 7, 0, 65543, 7, 0, 65544, 7, 0, 65545, -1610612733, 0, 65546, 6, 0, 196607, 6, 0, 131072, -1073741821, 0, 131073, 7, 0, 131074, 7, 0, 131075, 7, 0, 131076, 7, 0, 131077, 7, 0, 131078, 7, 0, 131079, 7, 0, 131080, 7, 0, 131081, -1610612733, 0, 131082, 6, 0, 262143, 6, 0, 196608, -1073741821, 0, 196609, 7, 0, 196610, 7, 0, 196611, 7, 0, 196612, 7, 0, 196613, 7, 0, 196614, 7, 0, 196615, 7, 0, 196616, 7, 0, 196617, -1610612733, 0, 196618, 6, 0, 327679, 6, 0, 262144, -1073741823, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 262152, 4, 0, 262153, 1610612737, 0, 262154, 6, 0, 393215, 6, 0, 327680, 1610612742, 0, 327681, 1610612742, 0, 327682, 1610612742, 0, 327683, 1610612742, 0, 327684, 1610612742, 0, 327685, 1610612742, 0, 327686, 1610612742, 0, 327687, 1610612742, 0, 327688, 1610612742, 0, 327689, 1610612742, 0, 327690, 6, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Objects" type="Node2D" parent="."]
+position = Vector2( -1072, -512 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Yatak" type="Sprite" parent="Objects"]
+position = Vector2( 1080, 480 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Hucre_Kapisi" type="Sprite" parent="Objects"]
+position = Vector2( 800, 448 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Hucre_Kapisi2" type="Sprite" parent="Objects"]
+position = Vector2( 864, 448 )
+scale = Vector2( 2, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Character" type="AnimatedSprite" parent="Objects"]
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+position = Vector2( 1010, 478 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 42 )
+animation = "Idle"
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Toilet" type="StaticBody2D" parent="Objects"]
+position = Vector2( 940, 474 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="Objects/Toilet"]
+frames = SubResource( 25 )
+animation = "Idle"
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Toilet"]
+visible = false
+position = Vector2( 0, -0.5 )
+shape = SubResource( 26 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="Objects/Toilet"]
+margin_left = -8.0
+margin_top = -15.0
+margin_right = 8.0
+margin_bottom = 14.0
+focus_mode = 0
+custom_styles/hover = SubResource( 27 )
+custom_styles/pressed = SubResource( 28 )
+custom_styles/focus = SubResource( 29 )
+custom_styles/disabled = SubResource( 30 )
+custom_styles/normal = SubResource( 31 )
+enabled_focus_mode = 0
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="PrisonSummit" type="Label" parent="."]
-margin_top = 160.0
-margin_right = 1280.0
-margin_bottom = 403.0
-custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+margin_left = 140.0
+margin_top = 130.0
+margin_right = 940.0
+margin_bottom = 430.0
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Prison Summit
-"
-align = 1
+text = "Prison Summit"
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="Credits" type="Label" parent="."]
-margin_top = 560.0
-margin_right = 160.0
-margin_bottom = 760.0
-custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+modulate = Color( 0.627451, 0.156863, 0.156863, 1 )
+margin_top = 584.0
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
 custom_fonts/font = SubResource( 14 )
-text = "As7ra
-Plewr
-Slour
-"
+text = "Credits: As7ra, Plewr & Slour"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="Button" type="Button" parent="."]
-margin_top = 320.0
-margin_right = 1280.0
-margin_bottom = 400.0
+margin_left = 140.0
+margin_top = 280.0
+margin_right = 440.0
+margin_bottom = 350.0
 focus_mode = 0
-custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
-custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+custom_colors/font_color_hover = Color( 0.901961, 0.901961, 0.901961, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 13 )
-text = "CONTINUE"
+text = "Continue"
 flat = true
+align = 0
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="Button3" type="Button" parent="."]
-margin_left = -2.0
-margin_top = 400.0
-margin_right = 1278.0
-margin_bottom = 480.0
+margin_left = 140.0
+margin_top = 350.0
+margin_right = 440.0
+margin_bottom = 420.0
 focus_mode = 0
-custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+custom_colors/font_color_hover = Color( 0.901961, 0.901961, 0.901961, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 13 )
 enabled_focus_mode = 0
-text = "NEW GAME"
+text = "New Game"
 flat = true
+align = 0
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_top = 480.0
-margin_right = 1280.0
-margin_bottom = 560.0
+margin_left = 140.0
+margin_top = 420.0
+margin_right = 440.0
+margin_bottom = 490.0
 focus_mode = 0
-custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
-custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+custom_colors/font_color_hover = Color( 0.901961, 0.901961, 0.901961, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 13 )
-text = "EXIT"
+text = "Quit"
 flat = true
+align = 0
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 43 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -10.0
+volume_db = -15.0
 autoplay = true
 
+[connection signal="button_up" from="Objects/Toilet/Button" to="." method="_on_Button_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
