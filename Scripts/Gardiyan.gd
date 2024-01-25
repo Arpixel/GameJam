@@ -17,7 +17,7 @@ func _process(_delta):
 	if Global.Player_Crouch == true:
 		Global.alarm_system = false
 	if Global.alarm_system == true:
-		speed = 100
+		speed = 90
 	else:
 		speed = 80
 

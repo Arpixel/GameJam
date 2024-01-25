@@ -458,6 +458,7 @@ adjustment_enabled = true
 adjustment_brightness = 0.9
 
 [node name="Level1" type="Node2D"]
+scale = Vector2( 0.978071, 0.850794 )
 
 [node name="CevreTasarim" type="Node2D" parent="."]
 
