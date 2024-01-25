@@ -7,7 +7,6 @@ func _ready():
 	$YellowKey.monitoring = false
 	Global.Load_Game()
 	Global.Posy -= 10
-	Global.ReloadPosition()
 	Global.Save_Game()
 
 func _on_PurpleKeyVisibleButton_pressed():

@@ -16,4 +16,5 @@ func _on_Key_body_entered(body):
 	if body.name == "Player":
 		kaybol = true
 		Global.GreenKey = true
+		Global.Checkpoint()
 		Global.Save_Game()

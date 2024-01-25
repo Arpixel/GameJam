@@ -6,7 +6,6 @@ onready var Hucre_Kapisi = $GreenRoomCikis/Area2D
 func _ready():
 	Global.Load_Game()
 	Global.Posy -= 10
-	Global.ReloadPosition()
 	
 	$PurpleKey.monitoring = false
 

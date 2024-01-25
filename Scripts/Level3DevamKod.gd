@@ -13,7 +13,6 @@ var YellowDoorKilitAcildi = false
 
 func _ready():
 	
-	
 	$GreenDoor/GreenButton.disabled = true
 	GreenDoorColision = false
 	
