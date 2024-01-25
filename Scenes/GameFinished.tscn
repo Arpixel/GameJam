@@ -912,7 +912,7 @@ text = "The adventure is beginning now!"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 448, -48 )
 stream = ExtResource( 16 )
-volume_db = -25.0
+volume_db = -15.0
 autoplay = true
 max_distance = 1300.0
 
