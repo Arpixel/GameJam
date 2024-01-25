@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PixelArts/Door.png" type="Texture" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://PixelArts/aski.png" type="Texture" id=26]
 [ext_resource path="res://Musics/Portal2-1x02-Concentration_Enhancing_Menu_Initialiser.mp3" type="AudioStream" id=27]
 [ext_resource path="res://PixelArts/Sofa_Tecrube.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=29]
 
 [sub_resource type="OccluderPolygon2D" id=12]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -430,6 +431,20 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
+6/name = "Masa2.png 6"
+6/texture = ExtResource( 21 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 19, 32 )
@@ -481,7 +496,7 @@ modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
 tile_set = SubResource( 20 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -131051, 3, 0, -131035, 0, 0, -65536, 536870915, 0, -65535, 536870916, 0, -65534, 5, 0, -65521, 5, 0, -65515, 0, 0, -65508, 5, 0, -65499, 3, 0, -65498, 5, 0 )
+tile_data = PoolIntArray( -131051, 3, 0, -131035, 0, 0, -65536, 536870915, 0, -65535, 536870916, 0, -65534, 5, 0, -65521, 5, 0, -65515, 0, 0, -65508, 5, 0, -65499, 3, 0, -65498, 5, 0, -65487, 6, 0 )
 
 [node name="Kameralar" type="Node2D" parent="CevreTasarim"]
 __meta__ = {
@@ -505,6 +520,85 @@ scale = Vector2( 1, -1 )
 [node name="Sprite" type="Sprite" parent="CevreTasarim"]
 position = Vector2( 719, -16 )
 texture = ExtResource( 18 )
+
+[node name="Lambalar" type="Node2D" parent="CevreTasarim"]
+
+[node name="Lamp 00" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( -81, -128 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 01" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 46, -128 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 02" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 252, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 03" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 379, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 04" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 485, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 05" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 612, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 06" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 818, -130 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 07" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 945, -130 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 08" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 1244, -128 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 09" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 1371, -128 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 10" parent="CevreTasarim/Lambalar" instance=ExtResource( 29 )]
+position = Vector2( 1583, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Room1GidisLevel1" type="Node2D" parent="."]
 script = ExtResource( 13 )
@@ -534,7 +628,7 @@ __meta__ = {
 }
 
 [node name="BlueKey" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1587, -25 )
+position = Vector2( 1586, -33 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.835294, 0.835294, 0.835294, 1 )

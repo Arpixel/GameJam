@@ -31,9 +31,10 @@
 [ext_resource path="res://PixelArts/ZeminTaban2.png" type="Texture" id=29]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=30]
 [ext_resource path="res://PixelArts/Adsız.png" type="Texture" id=31]
+[ext_resource path="res://Scripts/Level3.gd" type="Script" id=32]
 [ext_resource path="res://PixelArts/Paspas.png" type="Texture" id=33]
 [ext_resource path="res://PixelArts/sifonyer2.png" type="Texture" id=34]
-[ext_resource path="res://Scripts/Level3Deva.gd" type="Script" id=35]
+[ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=35]
 
 [sub_resource type="OccluderPolygon2D" id=81]
 polygon = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -148,9 +149,6 @@ polygon = PoolVector2Array( 32, 22.9375, 0, 22.9375, 0, 1, 32, 1 )
 [sub_resource type="ConvexPolygonShape2D" id=98]
 points = PoolVector2Array( 32, 22.875, 0, 22.875, 0, 1.0625, 32, 1 )
 
-[sub_resource type="OccluderPolygon2D" id=100]
-polygon = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
-
 [sub_resource type="OccluderPolygon2D" id=101]
 polygon = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 
@@ -235,7 +233,6 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 2/region = Rect2( 0, 0, 32, 32 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
-2/occluder = SubResource( 100 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -838,16 +835,44 @@ margin_top = -18.0
 margin_right = 357.0
 margin_bottom = -18.0
 
-[node name="Level3Deva" type="Area2D" parent="."]
+[node name="Level3kapi" type="Area2D" parent="."]
 position = Vector2( 2938, -196 )
-script = ExtResource( 35 )
+script = ExtResource( 32 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level3Deva"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level3kapi"]
 position = Vector2( -59.5, -0.5 )
 shape = SubResource( 118 )
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 119 )
 
-[connection signal="body_entered" from="Level3Deva" to="Level3Deva" method="_on_Level3Deva_body_entered"]
-[connection signal="body_exited" from="Level3Deva" to="Level3Deva" method="_on_Level3Deva_body_exited"]
+[node name="Lamp 00" parent="." instance=ExtResource( 35 )]
+position = Vector2( 2325, -322 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 01" parent="." instance=ExtResource( 35 )]
+position = Vector2( 2452, -322 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 02" parent="." instance=ExtResource( 35 )]
+position = Vector2( 2549, -322 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 03" parent="." instance=ExtResource( 35 )]
+position = Vector2( 2676, -322 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="body_entered" from="Level3kapi" to="Level3kapi" method="_on_Level3kapi_body_entered"]
+[connection signal="body_exited" from="Level3kapi" to="Level3kapi" method="_on_Level3kapi_body_exited"]

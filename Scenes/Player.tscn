@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Character/Walk/Walk Sprite Sheet.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Character/Jump/Jump Sprite Sheet.png" type="Texture" id=4]
-[ext_resource path="res://PixelArts/lighteffect.png" type="Texture" id=5]
+[ext_resource path="res://PixelArts/Effect 1.png" type="Texture" id=5]
 [ext_resource path="res://Font/EXEPixelPerfect.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Sprites/Character/Crouch Idle/Crouch Idle Sprite Sheet.png" type="Texture" id=7]
 
@@ -182,16 +182,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Light2D" type="Light2D" parent="Player"]
-texture = ExtResource( 5 )
-texture_scale = 0.5
-energy = 0.2
-shadow_enabled = true
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
 [node name="Camera2D" type="Camera2D" parent="Player"]
 visible = false
 rotating = true
@@ -242,3 +232,13 @@ margin_bottom = -5.0
 rect_scale = Vector2( 0.3, 0.3 )
 custom_fonts/font = SubResource( 26 )
 align = 1
+
+[node name="Light2D" type="Light2D" parent="Player"]
+position = Vector2( 0, -1 )
+texture = ExtResource( 5 )
+texture_scale = 0.2
+energy = 0.5
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}

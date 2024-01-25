@@ -202,6 +202,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+visible = false
 position = Vector2( -1.5, 1 )
 shape = SubResource( 38 )
 __meta__ = {

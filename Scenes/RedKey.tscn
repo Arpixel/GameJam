@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/RedKey.gd" type="Script" id=1]
-[ext_resource path="res://PixelArts/lighteffect.png" type="Texture" id=2]
+[ext_resource path="res://PixelArts/Effect 1.png" type="Texture" id=2]
 [ext_resource path="res://PixelArts/KeyRed.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -48,16 +48,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Light2D" type="Light2D" parent="Key"]
-position = Vector2( -4, 4 )
-texture = ExtResource( 2 )
-texture_scale = 3.0
-energy = 0.75
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
 [node name="Key" type="Sprite" parent="Key"]
 texture = ExtResource( 3 )
 __meta__ = {
@@ -78,5 +68,14 @@ __meta__ = {
 autoplay = "KeyAnim"
 anims/KeyAnim = SubResource( 2 )
 anims/RESET = SubResource( 3 )
+
+[node name="Light2D2" type="Light2D" parent="Key"]
+position = Vector2( 0, 1 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
 
 [connection signal="body_entered" from="Key" to="Key" method="_on_Key_body_entered"]

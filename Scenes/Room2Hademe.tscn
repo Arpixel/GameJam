@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scripts/SkibidiToilet.gd" type="Script" id=1]
 [ext_resource path="res://PixelArts/Duvar.png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Scripts/Room2Hademe.gd" type="Script" id=21]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Musics/Portal2-1x13-15_Acres_of_Broken_Glass.mp3" type="AudioStream" id=23]
+[ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -367,6 +368,9 @@ __meta__ = {
 position = Vector2( -78, -34 )
 
 [node name="Room2Cikis" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Area2D" type="Area2D" parent="Room2Cikis"]
 __meta__ = {
@@ -393,6 +397,13 @@ autoplay = true
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 17 )
+
+[node name="Lamp 00" parent="." instance=ExtResource( 24 )]
+position = Vector2( 15, -96 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [connection signal="pressed" from="Toilet/Button" to="Toilet" method="_on_Button_pressed"]
 [connection signal="body_entered" from="Room2Cikis/Area2D" to="." method="_on_Area2D_body_entered"]

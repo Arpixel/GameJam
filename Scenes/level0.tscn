@@ -12,7 +12,6 @@
 [ext_resource path="res://Scripts/Key.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/Room2Giris.gd" type="Script" id=11]
 [ext_resource path="res://PixelArts/Door2.png" type="Texture" id=12]
-[ext_resource path="res://PixelArts/lighteffect.png" type="Texture" id=13]
 [ext_resource path="res://PixelArts/KeyOrange.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/Room1Giris.tscn" type="PackedScene" id=15]
 [ext_resource path="res://PixelArts/Tavan2.png" type="Texture" id=16]
@@ -25,6 +24,7 @@
 [ext_resource path="res://PixelArts/Elevator.png" type="Texture" id=23]
 [ext_resource path="res://Scripts/Elevator.gd" type="Script" id=24]
 [ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=25]
+[ext_resource path="res://PixelArts/Effect 1.png" type="Texture" id=26]
 
 [sub_resource type="OccluderPolygon2D" id=31]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -370,16 +370,6 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Light2D" type="Light2D" parent="Key"]
-position = Vector2( -4, 4 )
-texture = ExtResource( 13 )
-texture_scale = 0.2
-energy = 0.75
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
 [node name="Key" type="Sprite" parent="Key"]
 texture = ExtResource( 14 )
 __meta__ = {
@@ -400,6 +390,15 @@ __meta__ = {
 autoplay = "KeyAnim"
 anims/KeyAnim = SubResource( 18 )
 anims/RESET = SubResource( 19 )
+
+[node name="Light2D" type="Light2D" parent="Key"]
+texture = ExtResource( 26 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Room2Giris" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -457,6 +456,23 @@ margin_top = -22.0
 margin_right = 18.0
 margin_bottom = 32.0
 flat = true
+
+[node name="Light2D" type="Light2D" parent="Elevator"]
+texture = ExtResource( 26 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Light2D2" type="Light2D" parent="Elevator"]
+position = Vector2( 1600, -32 )
+texture = ExtResource( 26 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Gardiyan 00" parent="." instance=ExtResource( 20 )]
 position = Vector2( 658, -17 )

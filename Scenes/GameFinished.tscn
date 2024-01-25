@@ -799,7 +799,7 @@ animations = [ {
 extents = Vector2( 10, 15 )
 
 [sub_resource type="RectangleShape2D" id=55]
-extents = Vector2( 0, 46 )
+extents = Vector2( 3, 47 )
 
 [sub_resource type="DynamicFont" id=56]
 font_data = ExtResource( 22 )
@@ -913,7 +913,7 @@ position = Vector2( 368, -6 )
 script = ExtResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -1, -32 )
+position = Vector2( 2, -31 )
 shape = SubResource( 55 )
 
 [node name="Label" type="Label" parent="."]

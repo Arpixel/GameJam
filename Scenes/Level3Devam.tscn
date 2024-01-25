@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PixelArts/Tavan2.png" type="Texture" id=2]
@@ -12,13 +12,14 @@
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=11]
 [ext_resource path="res://PixelArts/Elevator.png" type="Texture" id=12]
-[ext_resource path="res://PixelArts/lighteffect.png" type="Texture" id=13]
+[ext_resource path="res://PixelArts/Effect 1.png" type="Texture" id=13]
 [ext_resource path="res://PixelArts/KeyGreen.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/GreenKey.gd" type="Script" id=15]
 [ext_resource path="res://Scripts/Level3DevamKod.gd" type="Script" id=16]
 [ext_resource path="res://PixelArts/GreenLock.png" type="Texture" id=17]
 [ext_resource path="res://PixelArts/PurpleLock.png" type="Texture" id=18]
 [ext_resource path="res://PixelArts/YellowLock.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=20]
 
 [sub_resource type="OccluderPolygon2D" id=31]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -301,6 +302,85 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Lambalar" type="Node2D" parent="CevreTasarim"]
+
+[node name="Lamp 00" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( -64, -130 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 01" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 129, -130 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 02" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 334, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 03" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 527, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 04" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 687, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 05" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 828, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 06" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 1039, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 07" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 1216, -130 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 08" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 1440, -129 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 09" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 1504, -130 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lamp 10" parent="CevreTasarim/Lambalar" instance=ExtResource( 20 )]
+position = Vector2( 1569, -130 )
+scale = Vector2( 0.75, 0.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="Kameralar" type="Node2D" parent="."]
 __meta__ = {
 "_edit_lock_": true
@@ -402,15 +482,6 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Light2D" type="Light2D" parent="Key"]
-position = Vector2( -4, 4 )
-texture = ExtResource( 13 )
-energy = 0.21
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
 [node name="Key" type="Sprite" parent="Key"]
 texture = ExtResource( 14 )
 __meta__ = {
@@ -432,11 +503,47 @@ autoplay = "KeyAnim"
 anims/KeyAnim = SubResource( 39 )
 anims/RESET = SubResource( 40 )
 
+[node name="Light2D" type="Light2D" parent="Key"]
+texture = ExtResource( 13 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
 [node name="Player" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1237, -35 )
+position = Vector2( 34, -19 )
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 42 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 1505, -26 )
+texture = ExtResource( 13 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 1437, -26 )
+texture = ExtResource( 13 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( 1569, -27 )
+texture = ExtResource( 13 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
 
 [connection signal="body_entered" from="GreenDoor" to="." method="_on_GreenDoor_body_entered"]
 [connection signal="body_exited" from="GreenDoor" to="." method="_on_GreenDoor_body_exited"]

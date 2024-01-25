@@ -4,7 +4,7 @@ extends KinematicBody2D
 var velocity = Vector2()
 var speed = 120
 var gravity = 12
-var jump_strength = -270
+var jump_strength = -230
 var dir = 0
 
 onready var player = $"."
