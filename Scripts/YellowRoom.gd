@@ -1,19 +1,10 @@
 extends Node2D
 
 var Hucre_Kapisi_Aktif = true
-onready var Hucre_Kapisi = $GreenRoomCikis/Area2D
+onready var Hucre_Kapisi = $Area2D
 
 func _ready():
-	$YellowKey.monitoring = false
-	Global.Load_Game()
-	Global.Posy -= 10
-	Global.ReloadPosition()
-	Global.Save_Game()
-
-func _on_PurpleKeyVisibleButton_pressed():
-	$PurpleKeyVisibleButton.disabled = true
-	$YellowKey.visible = true
-	$YellowKey.monitoring = true
+	Global.oyunbitti = true
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
@@ -28,3 +19,4 @@ func _on_Area2D_body_exited(body):
 func _process(_delta):
 	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true:
 		get_tree().change_scene("res://Scenes/Level3Devam.tscn")
+

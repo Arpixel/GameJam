@@ -11,6 +11,7 @@ func _ready():
 	$PurpleKey.monitoring = false
 
 func _on_PurpleKeyVisibleButton_pressed():
+	$PurpleKeyVisibleButton.disabled = true
 	$PurpleKey.visible = true
 	$PurpleKey.monitoring = true
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PixelArts/Tavan2.png" type="Texture" id=2]
@@ -20,6 +20,10 @@
 [ext_resource path="res://PixelArts/PurpleLock.png" type="Texture" id=18]
 [ext_resource path="res://PixelArts/YellowLock.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Gardiyan 00.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Font/ChiKareGo2.ttf" type="DynamicFontData" id=22]
+[ext_resource path="res://Musics/Portal2-1x02-Concentration_Enhancing_Menu_Initialiser.mp3" type="AudioStream" id=23]
+[ext_resource path="res://Scenes/Elevator2.gd" type="Script" id=24]
 
 [sub_resource type="OccluderPolygon2D" id=45]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -211,6 +215,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 32, 40 )
+
 [sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 19, 35.5 )
 
@@ -257,13 +264,15 @@ glow_blend_mode = 0
 adjustment_enabled = true
 adjustment_brightness = 0.9
 
+[sub_resource type="DynamicFont" id=50]
+font_data = ExtResource( 22 )
+
 [node name="Level3Devam" type="Node2D"]
 script = ExtResource( 16 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.698039, 0.698039, 0.698039, 1 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_lock_": true
 }
 
@@ -395,6 +404,43 @@ __meta__ = {
 
 [node name="PauseMenu" parent="." instance=ExtResource( 11 )]
 
+[node name="Elevator2" type="Node2D" parent="."]
+position = Vector2( -1568, 0 )
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Light2D2" type="Light2D" parent="Elevator2"]
+position = Vector2( 1600, -32 )
+texture = ExtResource( 13 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Elevator2"]
+position = Vector2( 1600, -32 )
+
+[node name="Sprite" type="Sprite" parent="Elevator2/Area2D"]
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator2/Area2D"]
+visible = false
+shape = SubResource( 51 )
+
+[node name="Button" type="Button" parent="Elevator2/Area2D"]
+visible = false
+margin_left = -18.0
+margin_top = -22.0
+margin_right = 18.0
+margin_bottom = 32.0
+flat = true
+
 [node name="GreenDoor" type="Area2D" parent="."]
 position = Vector2( 1440, -32 )
 __meta__ = {
@@ -468,12 +514,9 @@ margin_bottom = 32.0
 flat = true
 
 [node name="Key" type="Area2D" parent="."]
-position = Vector2( 1312, -16 )
+position = Vector2( 1350, -16 )
 collision_layer = 16
 script = ExtResource( 15 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Key" type="Sprite" parent="Key"]
 texture = ExtResource( 14 )
@@ -505,8 +548,31 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." instance=ExtResource( 10 )]
-position = Vector2( 34, -19 )
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Gardiyan 00" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 941, -17 )
+
+[node name="Gardiyan 01" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 458, -17 )
+
+[node name="Gardiyan 02" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 704, -17 )
+
+[node name="Gardiyan 03" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 221, -17 )
+
+[node name="Gardiyan 04" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 835, -17 )
+
+[node name="Gardiyan 05" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 352, -17 )
+
+[node name="Gardiyan 06" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 598, -17 )
+
+[node name="Gardiyan 07" parent="Node2D" instance=ExtResource( 21 )]
+position = Vector2( 115, -17 )
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 1505, -26 )
@@ -514,7 +580,8 @@ texture = ExtResource( 13 )
 texture_scale = 0.2
 energy = 0.75
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Light2D2" type="Light2D" parent="."]
@@ -523,7 +590,8 @@ texture = ExtResource( 13 )
 texture_scale = 0.2
 energy = 0.75
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Light2D3" type="Light2D" parent="."]
@@ -532,12 +600,36 @@ texture = ExtResource( 13 )
 texture_scale = 0.2
 energy = 0.75
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 44 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = 1158.0
+margin_top = -74.0
+margin_right = 1356.0
+margin_bottom = -52.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/font = SubResource( 50 )
+text = "Find KeyCard and
+run to elevator!
+<--------------"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1283, -20 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+
+[connection signal="body_entered" from="Elevator2/Area2D" to="Elevator2" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Elevator2/Area2D" to="Elevator2" method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="Elevator2/Area2D/Button" to="Elevator2" method="_on_Button_pressed"]
 [connection signal="body_entered" from="GreenDoor" to="." method="_on_GreenDoor_body_entered"]
 [connection signal="body_exited" from="GreenDoor" to="." method="_on_GreenDoor_body_exited"]
 [connection signal="pressed" from="GreenDoor/GreenButton" to="." method="_on_GreenButton_pressed"]

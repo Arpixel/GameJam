@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://PixelArts/Cimen_Alti.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Gecis.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://PixelArts/Duvar3.png" type="Texture" id=28]
 [ext_resource path="res://PixelArts/ZeminTaban2.png" type="Texture" id=29]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Scripts/Level3.gd" type="Script" id=32]
 [ext_resource path="res://PixelArts/Paspas.png" type="Texture" id=33]
 [ext_resource path="res://PixelArts/sifonyer2.png" type="Texture" id=34]
@@ -828,6 +829,12 @@ shape = SubResource( 118 )
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 119 )
+
+[node name="Lamp 00" parent="." instance=ExtResource( 31 )]
+position = Vector2( 2486, -322 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [connection signal="body_entered" from="Level3kapi" to="Level3kapi" method="_on_Level3kapi_body_entered"]
 [connection signal="body_exited" from="Level3kapi" to="Level3kapi" method="_on_Level3kapi_body_exited"]

@@ -15,6 +15,8 @@ var YellowKey = false
 var PurpleKey = false
 # MENÜ
 
+var oyunbitti = false
+
 var menu_engelle = true
 var menukapa = true
 
@@ -47,6 +49,9 @@ func Save_Game():
 	 "keycard":keycard,
 	 "BlueKey":BlueKey,
 	 "RedKey": RedKey,
+	 "GreenKey": GreenKey,
+	 "PurpleKey": PurpleKey,
+	 "YellowKey": YellowKey,
 	 "YemekAsansor":YemekAsansor
 	}
 	save_file.store_var(data)
@@ -66,6 +71,9 @@ func Load_Game():
 	Player_Heath = data["Player_Heath"]
 	keycard = data["keycard"]
 	YemekAsansor = data["YemekAsansor"]
+	GreenKey = data["GreenKey"]
+	PurpleKey = data["PurpleKey"]
+	YellowKey = data["YellowKey"]
 	save_file.close()#dosyayı kapattık
 
 func Checkpoint():

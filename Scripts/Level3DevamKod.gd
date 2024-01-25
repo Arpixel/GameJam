@@ -12,9 +12,6 @@ var YellowDoorKilitAcildi = false
 # BAŞLANGIÇTA SIFIRLAMA
 
 func _ready():
-	Global.Load_Game()
-	Global.Posy -= 10
-	Global.ReloadPosition()
 	
 	
 	$GreenDoor/GreenButton.disabled = true
@@ -45,21 +42,15 @@ func _process(_delta):
 	# IŞINLANMA
 	if Input.is_action_just_pressed("E") and GreenDoorColision and GreenDoorKilitAcildi == true:
 		Global.alarm_system = false
-		Global.Checkpoint()
-		Global.Save_Game()
 		get_tree().change_scene("res://Scenes/GreenRoom.tscn")
 	
 	if Input.is_action_just_pressed("E") and PurpleDoorColision and PurpleDoorKilitAcildi == true:
 		Global.alarm_system = false
-		Global.Checkpoint()
-		Global.Save_Game()
-		get_tree().change_scene("res://Scenes/Room1YemekOda.tscn")
+		get_tree().change_scene("res://Scenes/PurpleRoom.tscn")
 	
 	if Input.is_action_just_pressed("E") and YellowDoorColision and YellowDoorKilitAcildi == true:
 		Global.alarm_system = false
-		Global.Checkpoint()
-		Global.Save_Game()
-		get_tree().change_scene("res://Scenes/Room1YemekOda.tscn")
+		get_tree().change_scene("res://Scenes/YellowRoom.tscn")
 
 # GREEN
 
@@ -134,3 +125,4 @@ func _on_PurpleButton_pressed():
 func _on_YellowButton_pressed():
 	YellowDoorKilitAcildi = true
 	Global.player_text = "Press E to enter"
+
