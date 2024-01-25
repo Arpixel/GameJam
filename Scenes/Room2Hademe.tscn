@@ -300,15 +300,8 @@ extents = Vector2( 16.5, 26 )
 [sub_resource type="Environment" id=17]
 background_mode = 4
 glow_enabled = true
-glow_levels/1 = true
-glow_levels/2 = true
-glow_levels/4 = true
-glow_levels/6 = true
-glow_levels/7 = true
 glow_bloom = 0.01
 glow_blend_mode = 0
-glow_bicubic_upscale = true
-glow_high_quality = true
 adjustment_enabled = true
 adjustment_brightness = 0.9
 
@@ -395,15 +388,15 @@ stream = ExtResource( 23 )
 volume_db = -10.0
 autoplay = true
 
-[node name="Environment" type="WorldEnvironment" parent="."]
-environment = SubResource( 17 )
-
 [node name="Lamp 00" parent="." instance=ExtResource( 24 )]
 position = Vector2( 15, -96 )
 scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 17 )
 
 [connection signal="pressed" from="Toilet/Button" to="Toilet" method="_on_Button_pressed"]
 [connection signal="body_entered" from="Room2Cikis/Area2D" to="." method="_on_Area2D_body_entered"]

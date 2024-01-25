@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Character/Walk/Walk Sprite Sheet.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Character/Jump/Jump Sprite Sheet.png" type="Texture" id=4]
-[ext_resource path="res://PixelArts/Effect 1.png" type="Texture" id=5]
+[ext_resource path="res://PixelArts/Effect 2.png" type="Texture" id=5]
 [ext_resource path="res://Font/EXEPixelPerfect.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Sprites/Character/Crouch Idle/Crouch Idle Sprite Sheet.png" type="Texture" id=7]
 
@@ -236,7 +236,7 @@ align = 1
 [node name="Light2D" type="Light2D" parent="Player"]
 position = Vector2( 0, -1 )
 texture = ExtResource( 5 )
-texture_scale = 0.2
+texture_scale = 0.1
 energy = 0.5
 __meta__ = {
 "_edit_group_": true,
