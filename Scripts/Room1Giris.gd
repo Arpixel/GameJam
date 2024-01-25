@@ -9,7 +9,6 @@ func _ready():
 	$Area2D/Button.disabled = true
 	ColisionAktif = false
 	KilitAcildi = false
-	Global.Turuncu_key = false
 
 func _process(_delta):
 	
