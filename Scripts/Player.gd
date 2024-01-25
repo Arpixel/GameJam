@@ -17,13 +17,11 @@ func _ready():
 	
 
 func _process(_delta):
-	Global.Player_Heath += 0.01
-	
 	$ProgressBar.value = Global.Player_Heath
 	
 	if Global.Player_Heath <= 0:
 		get_tree().change_scene("res://Scenes/Main_Menu.tscn")
-		Global.Player_Heath =+ 100
+		Global.Player_Heath = 100
 	
 	
 	if Global.Player_Crouch == false:

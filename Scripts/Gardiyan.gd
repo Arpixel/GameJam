@@ -10,9 +10,6 @@ var Attack = false
 
 
 func _process(_delta):
-	if Global.GardiyanGizlendi == true:
-		Aktif = false
-		Attack = false
 	
 	GardianAI()
 	_UpdateAnim()
@@ -25,7 +22,7 @@ func _process(_delta):
 		speed = 80
 
 func GardianAI():
-	if Aktif == true and Attack == false and Global.Player_Crouch == false or Global.alarm_system == true:
+	if Aktif == true and Attack == false and Global.Player_Crouch == false or Global.alarm_system == true and Global.Player_Crouch == false:
 		if Global.Player.global_position.x > position.x:
 			dir = 1
 		else:
@@ -36,6 +33,7 @@ func GardianAI():
 		velocity.x = speed *dir
 		velocity.y += Gravity
 		velocity = move_and_slide(velocity, Vector2.UP)
+	
 	else:
 		dir = 0
 
@@ -62,7 +60,7 @@ func _UpdateAnim():
 			$AnimatedSprite.flip_h = true
 			$AnimatedSprite.play("Walk")
 	else:
-		$AnimatedSprite.play("Idle")
+		$AnimatedSprite.play("Attack")
 
 
 func _on_Attack_body_entered(body):
@@ -70,19 +68,18 @@ func _on_Attack_body_entered(body):
 		Attack = true
 	elif body.name == "Player" and Global.Player_Crouch == true:
 		Attack = false
-
-		Global.Player_Heath -= 5
+	
+		Global.Player_Heath -= 100
 		$AttackTimer.start()
 
 
 func _on_AttackTimer_timeout():
 	if Attack == true:
-		Global.Player_Heath -= 5
+		Global.Player_Heath -= 100
 
 		$AttackTimer.start()
 
 
 func _on_Attack_body_exited(body):
 	if body.name == "Player":
-		Attack = false
 		Attack = false

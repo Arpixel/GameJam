@@ -428,6 +428,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Light2D2" type="Light2D" parent="Elevator"]
+position = Vector2( 1600, -32 )
+texture = ExtResource( 26 )
+texture_scale = 0.2
+energy = 0.75
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" parent="Elevator" instance=ExtResource( 3 )]
+position = Vector2( 49, -21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Elevator/Player"]
+
 [node name="Area2D" type="Area2D" parent="Elevator"]
 position = Vector2( 1600, -32 )
 
@@ -456,23 +473,6 @@ margin_top = -22.0
 margin_right = 18.0
 margin_bottom = 32.0
 flat = true
-
-[node name="Light2D" type="Light2D" parent="Elevator"]
-texture = ExtResource( 26 )
-texture_scale = 0.2
-energy = 0.75
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Light2D2" type="Light2D" parent="Elevator"]
-position = Vector2( 1600, -32 )
-texture = ExtResource( 26 )
-texture_scale = 0.2
-energy = 0.75
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Gardiyan 00" parent="." instance=ExtResource( 20 )]
 position = Vector2( 658, -17 )
@@ -517,14 +517,6 @@ __meta__ = {
 }
 
 [node name="PauseMenu" parent="." instance=ExtResource( 18 )]
-
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1, -26 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )

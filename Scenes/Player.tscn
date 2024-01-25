@@ -220,8 +220,6 @@ margin_bottom = -17.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_styles/fg = SubResource( 24 )
 custom_styles/bg = SubResource( 25 )
-step = 1.0
-value = 100.0
 percent_visible = false
 
 [node name="ActionText" type="Label" parent="Player"]
