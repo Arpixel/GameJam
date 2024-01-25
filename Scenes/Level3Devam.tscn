@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PixelArts/Tavan2.png" type="Texture" id=2]
@@ -15,10 +15,7 @@
 [ext_resource path="res://PixelArts/lighteffect.png" type="Texture" id=13]
 [ext_resource path="res://PixelArts/KeyGreen.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/GreenKey.gd" type="Script" id=15]
-[ext_resource path="res://Scripts/Level3DevamKod.gd" type="Script" id=16]
-[ext_resource path="res://PixelArts/GreenLock.png" type="Texture" id=17]
-[ext_resource path="res://PixelArts/PurpleLock.png" type="Texture" id=18]
-[ext_resource path="res://PixelArts/YellowLock.png" type="Texture" id=19]
+[ext_resource path="res://Scripts/Level3Devam.gd" type="Script" id=16]
 
 [sub_resource type="OccluderPolygon2D" id=31]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -210,9 +207,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=41]
-extents = Vector2( 19, 28 )
-
 [sub_resource type="CircleShape2D" id=38]
 radius = 11.0
 
@@ -247,6 +241,24 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 16, 26 )
+
+[sub_resource type="Environment" id=42]
+background_mode = 4
+glow_enabled = true
+glow_levels/1 = true
+glow_levels/2 = true
+glow_levels/4 = true
+glow_levels/6 = true
+glow_levels/7 = true
+glow_bloom = 0.01
+glow_blend_mode = 0
+glow_bicubic_upscale = true
+glow_high_quality = true
+adjustment_enabled = true
+adjustment_brightness = 0.9
 
 [node name="Level3Devam" type="Node2D"]
 script = ExtResource( 16 )
@@ -305,85 +317,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="GreenDoor" type="Area2D" parent="."]
-position = Vector2( 1440, -24 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="PauseMenu" parent="." instance=ExtResource( 11 )]
 
-[node name="Sprite2" type="Sprite" parent="GreenDoor"]
-position = Vector2( 4.11272e-05, 0.250002 )
-scale = Vector2( 2, 1.98438 )
-texture = ExtResource( 17 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenDoor"]
-visible = false
-position = Vector2( 0, -4 )
-shape = SubResource( 41 )
-
-[node name="GreenButton" type="Button" parent="GreenDoor"]
-visible = false
-margin_left = -18.0
-margin_top = -28.0
-margin_right = 18.0
-margin_bottom = 24.0
-focus_mode = 0
-enabled_focus_mode = 0
-flat = true
-
-[node name="PurpleDoor" type="Area2D" parent="."]
-position = Vector2( 1504, -24 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="PurpleDoor"]
-position = Vector2( 4.11272e-05, 0.250002 )
-scale = Vector2( 2, 1.98438 )
-texture = ExtResource( 18 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PurpleDoor"]
-visible = false
-position = Vector2( 0, -4 )
-shape = SubResource( 41 )
-
-[node name="PurpleButton" type="Button" parent="PurpleDoor"]
-visible = false
-margin_left = -18.0
-margin_top = -28.0
-margin_right = 18.0
-margin_bottom = 24.0
-focus_mode = 0
-enabled_focus_mode = 0
-flat = true
-
-[node name="YellowDoor" type="Area2D" parent="."]
-position = Vector2( 1568, -24 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite2" type="Sprite" parent="YellowDoor"]
-position = Vector2( 4.11272e-05, 0.250002 )
-scale = Vector2( 2, 1.98438 )
-texture = ExtResource( 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YellowDoor"]
-visible = false
-position = Vector2( 0, -4 )
-shape = SubResource( 41 )
-
-[node name="YellowButton" type="Button" parent="YellowDoor"]
-visible = false
-margin_left = -18.0
-margin_top = -28.0
-margin_right = 18.0
-margin_bottom = 24.0
-focus_mode = 0
-enabled_focus_mode = 0
-flat = true
-
-[node name="GreenKey" type="Area2D" parent="."]
+[node name="Key" type="Area2D" parent="."]
 position = Vector2( 1312, -16 )
 collision_layer = 16
 script = ExtResource( 15 )
@@ -391,7 +327,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Light2D" type="Light2D" parent="GreenKey"]
+[node name="Light2D" type="Light2D" parent="Key"]
 position = Vector2( -4, 4 )
 texture = ExtResource( 13 )
 energy = 0.21
@@ -400,14 +336,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Key" type="Sprite" parent="GreenKey"]
+[node name="Key" type="Sprite" parent="Key"]
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenKey"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
 visible = false
 position = Vector2( -4, 4 )
 shape = SubResource( 38 )
@@ -416,23 +352,24 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="GreenKey"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Key"]
 autoplay = "KeyAnim"
 anims/KeyAnim = SubResource( 39 )
 anims/RESET = SubResource( 40 )
 
-[node name="PauseMenu" parent="." instance=ExtResource( 11 )]
-
 [node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1237, -35 )
 
-[connection signal="body_entered" from="GreenDoor" to="." method="_on_GreenDoor_body_entered"]
+[node name="GreenDoor" type="Area2D" parent="."]
+position = Vector2( 1440, -24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenDoor"]
+position = Vector2( 0, -2 )
+shape = SubResource( 41 )
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 42 )
+
+[connection signal="body_entered" from="Key" to="Key" method="_on_Key_body_entered"]
+[connection signal="body_entered" from="GreenDoor" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="GreenDoor" to="." method="_on_GreenDoor_body_exited"]
-[connection signal="pressed" from="GreenDoor/GreenButton" to="." method="_on_GreenButton_pressed"]
-[connection signal="body_entered" from="PurpleDoor" to="." method="_on_PurpleDoor_body_entered"]
-[connection signal="body_exited" from="PurpleDoor" to="." method="_on_PurpleDoor_body_exited"]
-[connection signal="pressed" from="PurpleDoor/PurpleButton" to="." method="_on_PurpleButton_pressed"]
-[connection signal="body_entered" from="YellowDoor" to="." method="_on_YellowDoor_body_entered"]
-[connection signal="body_exited" from="YellowDoor" to="." method="_on_YellowDoor_body_exited"]
-[connection signal="pressed" from="YellowDoor/YellowButton" to="." method="_on_YellowButton_pressed"]
-[connection signal="body_entered" from="GreenKey" to="GreenKey" method="_on_Key_body_entered"]
