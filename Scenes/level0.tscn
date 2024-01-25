@@ -437,14 +437,6 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Player" parent="Elevator" instance=ExtResource( 3 )]
-position = Vector2( 49, -21 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Elevator/Player"]
-
 [node name="Area2D" type="Area2D" parent="Elevator"]
 position = Vector2( 1600, -32 )
 
@@ -525,6 +517,14 @@ autoplay = true
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = SubResource( 36 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 49, -21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
 [connection signal="body_entered" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="CevreTasarim/Hucre_Kapisi/Area2D" to="." method="_on_Area2D_body_exited"]

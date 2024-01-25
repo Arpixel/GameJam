@@ -4,7 +4,7 @@ extends KinematicBody2D
 var Aktif = false
 var velocity = Vector2()
 var dir = 0
-var speed = 80
+var speed = 50
 var Gravity = 15
 var Attack = false
 
@@ -14,12 +14,6 @@ func _process(_delta):
 	GardianAI()
 	_UpdateAnim()
 	
-	if Global.Player_Crouch == true:
-		Global.alarm_system = false
-	if Global.alarm_system == true:
-		speed = 100
-	else:
-		speed = 80
 
 func GardianAI():
 	if Aktif == true and Attack == false and Global.Player_Crouch == false or Global.alarm_system == true and Global.Player_Crouch == false:
