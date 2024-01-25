@@ -28,6 +28,7 @@ var Player_Heath = 100
 
 var player_text = ""
 
+var dash_yetenek = false
 
 func Save_Game():
 	var save_file = File.new()#Dosya oluşturduk

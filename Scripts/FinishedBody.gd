@@ -31,4 +31,4 @@ func player_animation():
 			$AnimatedSprite.flip_h = (direction.x < 0)
 			$AnimatedSprite.play("Walk")
 		else:
-			$AnimatedSprite.play("Idle")
+			$AnimatedSprite.play("default")

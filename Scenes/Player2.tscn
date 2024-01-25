@@ -1,0 +1,234 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://Font/EXEPixelPerfect.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Player2.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Character/Idle/Idle Sprite Sheet2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Character/Walk/Walk Sprite Sheet 2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Character/Jump/Jump Sprite Sheet2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Character/Crouch Idle/Crouch Idle Sprite Sheet.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Dash.tscn" type="PackedScene" id=7]
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 6 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 6 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 6 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 6 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 6 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 6 )
+region = Rect2( 384, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 6 )
+region = Rect2( 432, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 5 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 5 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 4 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 4 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 4 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 3 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 3 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 3 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 3 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 3 )
+region = Rect2( 432, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
+"loop": true,
+"name": "Crouch",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 9.5, 15 )
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 0.329412, 0.117647, 0.117647, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+
+[sub_resource type="DynamicFont" id=41]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="Player2" type="Node2D"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+rotating = true
+current = true
+zoom = Vector2( 0.3, 0.3 )
+smoothing_enabled = true
+smoothing_speed = 4.0
+offset_v = -0.5
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+modulate = Color( 0.564706, 0.564706, 0.564706, 1 )
+frames = SubResource( 37 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+visible = false
+position = Vector2( -1.5, 1 )
+shape = SubResource( 38 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Player"]
+margin_left = -7.0
+margin_top = -21.0
+margin_right = 8.0
+margin_bottom = -17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/fg = SubResource( 39 )
+custom_styles/bg = SubResource( 40 )
+step = 1.0
+value = 100.0
+percent_visible = false
+
+[node name="ActionText" type="Label" parent="Player"]
+margin_left = -11.0
+margin_top = -31.0
+margin_right = 63.0
+margin_bottom = -5.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 41 )
+align = 1
+
+[node name="Dash" parent="Player" instance=ExtResource( 7 )]

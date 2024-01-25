@@ -13,6 +13,8 @@ func _process(_delta):
 	GardianAI()
 	_UpdateAnim()
 	
+	if Global.Player_Crouch == true:
+		Global.alarm_system = false
 
 
 func GardianAI():

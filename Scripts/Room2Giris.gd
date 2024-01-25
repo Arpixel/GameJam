@@ -8,7 +8,8 @@ func _ready():
 	Hucre_Kapisi_Aktif = false
 
 func _process(_delta):
-	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true and Global.alarm_system == false:
+	if Input.is_action_just_pressed("E") and Hucre_Kapisi_Aktif == true:
+		Global.alarm_system = false
 		Global.Checkpoint()
 		Global.Save_Game()
 		get_tree().change_scene("res://Scenes/Room2Hademe.tscn")
