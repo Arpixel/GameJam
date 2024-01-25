@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Font/ChiKareGo2.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Musics/Portal2-1x13-15_Acres_of_Broken_Glass.mp3" type="AudioStream" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://PixelArts/Lazimlik.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/Character/Idle/Idle Sprite Sheet.png" type="Texture" id=17]
 [ext_resource path="res://PixelArts/Hucre.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -376,6 +377,10 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+
+[node name="Lamp 00" parent="Objects" instance=ExtResource( 19 )]
+position = Vector2( 1010, 316 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Toilet" type="StaticBody2D" parent="Objects"]
 position = Vector2( 940, 474 )
