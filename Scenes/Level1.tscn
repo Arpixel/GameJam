@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PixelArts/Door.png" type="Texture" id=2]
@@ -29,7 +29,6 @@
 [ext_resource path="res://Musics/Portal2-1x02-Concentration_Enhancing_Menu_Initialiser.mp3" type="AudioStream" id=27]
 [ext_resource path="res://PixelArts/Sofa_Tecrube.png" type="Texture" id=28]
 [ext_resource path="res://Scenes/Lamp 00.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Scripts/Level1.gd" type="Script" id=30]
 
 [sub_resource type="OccluderPolygon2D" id=12]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -459,7 +458,7 @@ adjustment_enabled = true
 adjustment_brightness = 0.9
 
 [node name="Level1" type="Node2D"]
-script = ExtResource( 30 )
+scale = Vector2( 0.978071, 0.850794 )
 
 [node name="CevreTasarim" type="Node2D" parent="."]
 
