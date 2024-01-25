@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://PixelArts/Camera_Uc.png" type="Texture" id=1]
 [ext_resource path="res://PixelArts/Ana_Camera.png" type="Texture" id=2]
@@ -12,7 +12,7 @@ extents = Vector2( 8.5, 6.5 )
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite 00/Light2D:color")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -55,6 +55,21 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=5]
+resource_name = "VentAnim"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite 00/Light2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="Camera" type="StaticBody2D"]
 collision_layer = 32
 collision_mask = 32
@@ -72,7 +87,7 @@ __meta__ = {
 }
 
 [node name="Sprite 00" type="Sprite" parent="."]
-rotation = -0.610865
+rotation = -0.232741
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
@@ -96,7 +111,7 @@ __meta__ = {
 position = Vector2( -6, 0 )
 rotation = 1.5708
 enabled = true
-cast_to = Vector2( 25.5, 256 )
+cast_to = Vector2( 21.4298, 245.835 )
 collide_with_areas = true
 __meta__ = {
 "_edit_group_": true,
@@ -107,7 +122,7 @@ __meta__ = {
 position = Vector2( -6, 0 )
 rotation = 1.5708
 enabled = true
-cast_to = Vector2( -25.5, 256 )
+cast_to = Vector2( -23.0551, 250.089 )
 collide_with_areas = true
 __meta__ = {
 "_edit_group_": true,
@@ -128,6 +143,7 @@ autoplay = "CameraAnim"
 anims/Alarm_System = SubResource( 3 )
 anims/CameraAnim = SubResource( 2 )
 anims/RESET = SubResource( 4 )
+anims/VentAnim = SubResource( 5 )
 
 [node name="AlarmTime" type="Timer" parent="."]
 wait_time = 5.0

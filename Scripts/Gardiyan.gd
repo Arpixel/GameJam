@@ -4,18 +4,25 @@ extends KinematicBody2D
 var Aktif = false
 var velocity = Vector2()
 var dir = 0
-var speed = 70
+var speed = 80
 var Gravity = 15
 var Attack = false
 
 
 func _process(_delta):
+	if Global.GardiyanGizlendi == true:
+		Aktif = false
+		Attack = false
+	
 	GardianAI()
 	_UpdateAnim()
 	
 	if Global.Player_Crouch == true:
 		Global.alarm_system = false
-
+	if Global.alarm_system == true:
+		speed = 100
+	else:
+		speed = 80
 
 func GardianAI():
 	if Aktif == true and Attack == false and Global.Player_Crouch == false or Global.alarm_system == true:
@@ -61,6 +68,8 @@ func _UpdateAnim():
 func _on_Attack_body_entered(body):
 	if body.name == "Player" and Global.Player_Crouch == false:
 		Attack = true
+	elif body.name == "Player" and Global.Player_Crouch == true:
+		Attack = false
 
 		Global.Player_Heath -= 5
 		$AttackTimer.start()

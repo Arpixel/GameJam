@@ -9,6 +9,10 @@ var RedKey = false
 var Turuncu_key = false
 var keycard = false
 var YemekAsansor = false
+
+var GreenKey = false
+var YellowKey = false
+var PurpleKey = false
 # MENÜ
 
 var menu_engelle = true
@@ -17,6 +21,8 @@ var menukapa = true
 # VENT
 
 var Player_Crouch = false
+
+var GardiyanGizlendi = false
 
 # KAMERA
 
